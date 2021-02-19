@@ -274,7 +274,7 @@ public class ThemNhapXuatFragment extends DialogFragment {
             return;
         }
 
-        String strFormatDate = Utilities.formatDate_yyyyMMdd(edtOrderDate.getText().toString());
+        String strFormatDate = Utilities.formatDate_yyyyMMdd4(edtOrderDate.getText().toString());
 
         MyRetrofitWMS.initRequest().insertNhapXuat(strPhoneNumber,strPhoneNumber,strAndroidID,strFormatDate,iTimeSlotID,edtSoXe.getText().toString(),edtKhachHang.getText().toString(),edtTotalQuantity.getText().toString(),edtTotalWeights.getText().toString(),strVehicleType,iDockID,iOrderType).enqueue(new Callback<String>() {
             @Override

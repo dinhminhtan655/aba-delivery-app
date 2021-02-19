@@ -16,8 +16,8 @@ public class MyRetrofitWMS {
 
     public static MyRequests initRequest() {
 
-        String BASE_URL = "http://125.212.239.2:810/"; // link production
-//        String BASE_URL = "http://125.212.239.2:801/"; // link test
+//        String BASE_URL = "http://125.212.239.2:810/"; // link production
+        String BASE_URL = "http://125.212.239.2:801/"; // link test
 
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
         logging.setLevel(HttpLoggingInterceptor.Level.BODY);
