@@ -1,0 +1,147 @@
+<resources>
+    <string name="app_name">ABA</string>
+    <string name="login">Đang đăng nhập...</string>
+    <string name="no_internet">Không có kết nối mạng</string>
+    <string name="thongbao2">Bạn không có thông tin trong khoảng thời gian này.</string>
+    <string name="thongbao">Hiện tại bạn không có điểm giao</string>
+    <string name="thongbao3">Hiện tại bạn không có chuyến vui lòng kiểm tra trong mục CHUYẾN XE!</string>
+    <string name="thongbao4">Cửa hàng hiện tại có gặp vấn đề trong việc giao nhận hàng không?</string>
+    <string name="thongbao5">Vui lòng nhập mã cửa hàng để lấy thông tin!</string>
+    <string name="thongbao6">Trường hợp cùng CH nhưng 2 đơn.Vui lòng chọn mã cửa hàng tương ứng để lấy thông tin!</string>
+    <string name="title_activity_chup_hinh">Chụp hình đơn hàng</string>
+    <string name="baocaotitle">Báo cáo vấn đề (*)</string>
+    <string name="pickproblem">Chọn vấn đề</string>
+    <string name="note">Ghi chú</string>
+    <string name="note2">Ghi chú (Bắt buộc)</string>
+    <string name="picture">Đính kèm ảnh (*) - Đính kèm ít nhất một ảnh</string>
+    <string name="pick">Hãy lựa chọn giá trị</string>
+    <string name="maCH">Cửa hàng: </string>
+    <string name="maCH2">Cửa hàng ABA: </string>
+    <string name="phoneCH">SĐT: </string>
+    <string name="addressCH">Địa chỉ: </string>
+    <string name="totalCH">Số lượng thùng: </string>
+    <string name="totalCH2">Số thùng: </string>
+    <string name="problem">Sự cố lớn</string>
+    <string name="problem2">Sự cố hàng</string>
+    <string name="pickup">Nhận hàng</string>
+    <string name="delivery">Giao hàng</string>
+    <string name="deliveryfull">Giao hàng đủ</string>
+    <string name="default_notification_channel_id">com.tandm.abadeliverydriver.main.service.ABA</string>
+
+    <string name="date">Ngày</string>
+    <string name="storeCode">Mã CH</string>
+    <string name="giogiao">Giờ</string>
+    <string name="Number">SL</string>
+
+    <string name="current">Hiện tại</string>
+    <string name="assigned">Đang chờ</string>
+    <string name="accepted">Đã nhận</string>
+    <string name="nhanchuyen">Nhận Chuyến</string>
+    <string name="checkstop"><u>Kiểm tra điểm giao</u></string>
+    <string name="dongy">Đồng ý</string>
+    <string name="huy">Hủy</string>
+    <string name="tuchoi">Từ chối</string>
+    <string name="batdau">Bắt đầu</string>
+
+    <string name="qrcodedi">QR Code Đi</string>
+    <string name="qrcodeve">QR Code Về</string>
+
+    <string name="chitietluong">Lương chi tiết</string>
+    <string name="mieuta2">Miêu tả</string>
+    <string name="diemnhanhang">Điểm nhận hàng</string>
+    <string name="hoanthanhchuyen">Hoàn Thành Chuyến Xe</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="internal_storage">Internal storage</string>
+
+    <string name="huongdanupdate">
+
+        Nếu gặp lỗi "ỨNG DỤNG CHƯA ĐƯỢC CÀI ĐẶT" khi cài đặt file cập nhật. Thì hãy gỡ ứng dụng cũ ra và cài đặt lại file cập nhật mới.
+
+    </string>
+    <string name="thieumanhanvien">Liên hệ Admin để thêm mã nhân viên</string>
+    <string name="hoten">Họ và tên</string>
+    <string name="MaNhanVien">Mã số nhân viên</string>
+    <string name="ngayvaolam">Ngày vào làm</string>
+    <string name="cackhoancong">Các khoản cộng (2)+(4)+(5)+(6)+(7)+(8)+(9)+(10)+(12)+(13)+(14)</string>
+    <string name="cackhoancongxenho">Các khoản cộng (2)+(4)+(7)+(8)+(9)+(10)+(12)+(13)+(14)</string>
+    <string name="tongsochuyen">Tổng số chuyến (1)</string>
+    <string name="luongchuyenchinh">Lương chuyến chính (2)</string>
+    <string name="luongngayphep">Lương ngày phép (nếu có) (6)</string>
+    <string name="luongthang13">Lương tháng 13 :</string>
+    <string name="tienluonghocviec">Tiền lương học việc: (70,000 /ngày)</string>
+    <string name="tiendienthoai">Tiền điện thoại (7)</string>
+    <string name="phucapdoitruong">Phụ cấp đội trưởng (8)</string>
+    <string name="thucode">Thu code (8)</string>
+    <string name="thuongle">Thưởng lễ tết (chạy Tết, tháng lương 13...) (10)</string>
+    <string name="rotdiemlenhghep">Rớt điểm lệnh ghép (10)</string>
+    <string name="sinhnhat">Thưởng sinh nhật (9)</string>
+    <string name="diemkho">PC Điểm khó (12)</string>
+    <string name="hotrochaytettheothongbao">Hỗ trợ chạy tết theo thông báo (13)</string>
+    <string name="hoantienbigc">Hoàn tiền Big C (14)</string>
+    <string name="luongtrongthang">LƯƠNG TRONG THÁNG</string>
+    <string name="cackhoantrucongdau">TỔNG KHOẢN TRỪ (15)+(17)+(18)+(20)+(21)+(22)+(23)+(24)+(25)+(26)</string>
+    <string name="mucluongbhxh">Mức lương đóng BHXH (11)</string>
+    <string name="cackhoantru">Các khoản trừ (2)</string>
+    <string name="trichbhxh">Trích BHXH (12)=(11)*10,5%</string>
+    <string name="songuoiphuthuoc">Số người phụ thuộc (19)</string>
+    <string name="thuetncnphainop">Thuế TNCN phải nộp (13)</string>
+    <string name="datcoc14">Đặt cọc (14)</string>
+    <string name="tamungboithuong">Tạm ứng bồi thường (15)</string>
+    <string name="tamungluong">Tạm ứng lương (16)</string>
+    <string name="phinganhang">Phí ngân hàng (25)</string>
+    <string name="lephicongdoan">Lệ Phí công đoàn (18)</string>
+    <string name="luongthang13dachi">Lương tháng 13 đã chi (19)</string>
+    <string name="tamungluongchi">Tạm ứng lương chi ngày 20/1 (22)</string>
+    <string name="truvuotdinhmucdau">Trừ Vượt định mức dầu (20)</string>
+    <string name="thanhtiendau">Thành tiền dầu (21)=(17)*15,440</string>
+    <string name="tongcongphieuluong">(C) = (A) - (B)</string>
+    <string name="thuongdinhmucdau">Thưởng Định mức dầu (20)</string>
+    <string name="thanhtienthuongdau">Thành tiền thưởng dầu (21)= 18*15,440</string>
+    <string name="thuclanh">Thực lãnh (A)-(B)+(C)</string>
+    <string name="tiencocdathu">TIỀN CỌC ĐÃ THU TÍNH ĐẾN </string>
+    <string name="bangluongchitiet">BẢNG LƯƠNG CHI TIẾT THÁNG 2/2020</string>
+    <string name="thongtinthunhaptrongthang">Thu nhập tháng</string>
+    <string name="thongtinchitietluong">CHI TIẾT LƯƠNG</string>
+    <string name="thongtinnhanvien">Thông tin
+                                    NV</string>
+    <string name="luongphutro">Lương hỗ trợ (nếu có) (5)</string>
+    <string name="trigia">Trị Giá</string>
+    <string name="loailuong">Loại lương</string>
+    <string name="m_s_thu_tncn">Mã số thuế TNCN</string>
+    <string name="s_ng_y_h_c_vi_c_n_u_c">Số ngày học việc (nếu có) (3)</string>
+    <string name="luonghocviec">Lương học việc (70,000 đ /ngày) (4)</string>
+    <string name="th_ng_ti_n_d_u_n_u_c">Thưởng tiền dầu (nếu có) (12) = (11) * Giá dầu</string>
+    <string name="l_ng_th_ng_l_t_t_th_ng_13">Lương thưởng (lễ, Tết, tháng 13) (13)</string>
+    <string name="kh_c_c_c_kho_n_b_sung_kho_n_kh_c_14">Khác (các khoản bổ sung, khoản khác...) (14)</string>
+    <string name="nh_m_c_d_u_v_t_l_t_11">Định mức dầu vượt (lít) (11)</string>
+    <string name="ti_n_d_u">Tiền dầu (15) = (11) * Giá dầu</string>
+    <string name="l_ng_ng_bhxh">Lương đóng BHXH (16)</string>
+    <string name="bhbb">BHBB (xã hội, y tế,...) (17) = 10.5% x (16)</string>
+    <string name="i_u_ch_nh_bhxh_n_u_c">Điều chỉnh BHXH (nếu có) (18)</string>
+    <string name="thu_tncn_ph_i_n_p">Thuế TNCN phải nộp (20)</string>
+    <string name="ti_n_t_c_c_21">Tiền đặt cọc (21)</string>
+    <string name="t_m_ng_b_i_th_ng_22">Tạm ứng bồi thường (22)</string>
+    <string name="t_m_ng_l_ng_23">Tạm ứng lương (23)</string>
+    <string name="ph_c_ng_o_n_24">Phí công đoàn (24)</string>
+    <string name="truy_thu_kh_c_n_u_c_26">Truy thu khác (nếu có) (26)</string>
+    <string name="ghi_ch_n_u_c_c_m_n_b_n_v_lu_n_n_l_c_v_c_ng_ng_h_nh_v_i_aba">Ghi chú (nếu có): \'\'Cảm ơn bạn vì đã luôn nổ lực và cùng đồng hành với ABA\'\'</string>
+    <string name="v_tr">Vị Trí</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="thongbaobikeriscompleted">Cửa hàng hiện tại đã được giao. Vui lòng kiểm tra lại mã cửa hàng!</string>
+    <string name="khaydautien">Khay đầu tiên (1)</string>
+    <string name="khaykhac">Khay khác (2)</string>
+    <string name="giaobuch">Giao bù cửa hàng (3)</string>
+    <string name="ngaylamviecdat">Ngày làm việc đạt</string>
+    <string name="kpingay">KPI ngày (4)</string>
+    <string name="kpithang">KPI tháng (5)</string>
+    <string name="busanluong">Bù sản lượng (6)</string>
+    <string name="bosung">Bổ sung (7)</string>
+    <string name="thue">Thuế TNCN</string>
+    <string name="phikhac">Phí khác NH</string>
+    <string name="coc">Cọc</string>
+    <string name="trao_doi">Trao đổi</string>
+
+
+</resources>

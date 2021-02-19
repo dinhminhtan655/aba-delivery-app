@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".main.home.fragmentdieudong.DieuDongFragment">
+
+
+    <TextView
+        android:id="@+id/tvDieuDongTitle"
+        android:text="Mã Lệnh Điều Động"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="@dimen/sp25"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+    <ImageView
+        android:id="@+id/imgQR"
+        android:layout_width="@dimen/dp300"
+        android:layout_height="@dimen/dp300"/>
+
+
+
+    <TextView
+        android:id="@+id/tvMaLenh"
+        android:text="Mã Lệnh Điều Động"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="@dimen/sp25"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+
+</LinearLayout>

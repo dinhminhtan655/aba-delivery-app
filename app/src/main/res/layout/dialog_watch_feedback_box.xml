@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="#C3A07E7E"
+    android:backgroundTintMode="screen">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp20"
+            android:gravity="center"
+            android:text="Góp ý"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvShipmentID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:text=""
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:text=""
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+            android:textColor="@color/black" />
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            app:boxCornerRadiusBottomEnd="@dimen/dp10"
+            app:boxCornerRadiusBottomStart="@dimen/dp10"
+            app:boxCornerRadiusTopEnd="@dimen/dp10"
+            app:boxCornerRadiusTopStart="@dimen/dp10"
+            app:hintAnimationEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtTitleFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginRight="@dimen/dp20"
+                android:drawableLeft="@drawable/ic_note"
+                android:drawablePadding="@dimen/dp10"
+                android:hint="Tiêu đề"
+                android:inputType="text"
+                android:focusable="false"
+                android:maxLines="10"
+                android:minLines="4"
+                android:scrollbars="vertical"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            app:boxCornerRadiusBottomEnd="@dimen/dp10"
+            app:boxCornerRadiusBottomStart="@dimen/dp10"
+            app:boxCornerRadiusTopEnd="@dimen/dp10"
+            app:boxCornerRadiusTopStart="@dimen/dp10"
+            app:hintAnimationEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtContentFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginRight="@dimen/dp20"
+                android:drawableLeft="@drawable/ic_note"
+                android:drawablePadding="@dimen/dp10"
+                android:hint="Nội dung"
+                android:focusable="false"
+                android:inputType="textMultiLine"
+                android:maxLines="10"
+                android:minLines="4"
+                android:scrollbars="vertical"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp20"
+            android:layout_gravity="right">
+
+            <Button
+                android:id="@+id/btnCloseFeedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/dp20"
+                android:text="Đóng"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

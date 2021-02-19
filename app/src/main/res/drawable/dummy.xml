@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list android:opacity="transparent" xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:width="100dp" android:gravity="right" android:start="300dp"
+        android:background="@drawable/header_bg">
+        <bitmap android:src="@drawable/dropdown" android:gravity="center"/>
+    </item>
+</layer-list>

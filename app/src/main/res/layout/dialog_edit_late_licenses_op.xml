@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="#C3A07E7E"
+    android:backgroundTintMode="screen"
+    tools:context=".main.home.fragmentvouchers.VouchersFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:gravity="center"
+            android:text="Thông tin phiếu"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:gravity="center"
+            android:text="(Có thể xem, duyệt và không duyệt)"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="@color/black" />
+
+
+        <TextView
+            android:id="@+id/tvEditFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp5"
+            android:gravity="center"
+            tools:text="Huỳnh Tấn Dũng (XT VT)"
+            android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvEditDriverId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp5"
+            android:gravity="center"
+            tools:text="8100029"
+            android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvEditShipment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp5"
+            android:gravity="center"
+            tools:text="ATM_SH20201013-0056"
+            android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvEditCustomer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:gravity="center"
+            tools:text="VCMFRESH"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tvEditStartTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp5"
+            android:gravity="center"
+            tools:text="14/10/2020"
+            android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvEditState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:gravity="center"
+            tools:text="CHỜ XỬ LÝ"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:text="Ngày NVGN nộp (Quản lý có thể sửa)"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+            android:textColor="@color/black" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            app:boxCornerRadiusBottomEnd="@dimen/dp10"
+            app:boxCornerRadiusBottomStart="@dimen/dp10"
+            app:boxCornerRadiusTopEnd="@dimen/dp10"
+            app:boxCornerRadiusTopStart="@dimen/dp10"
+            app:hintAnimationEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtEditDateOfFilingVouchers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginRight="@dimen/dp20"
+                android:drawableLeft="@drawable/ic_calendar"
+                android:drawablePadding="@dimen/dp10"
+                android:hint="Ngày nộp (Bắt buộc)"
+                android:scrollbars="vertical"
+                android:focusable="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            app:boxCornerRadiusBottomEnd="@dimen/dp10"
+            app:boxCornerRadiusBottomStart="@dimen/dp10"
+            app:boxCornerRadiusTopEnd="@dimen/dp10"
+            app:boxCornerRadiusTopStart="@dimen/dp10"
+            app:hintAnimationEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtEditNoteVouchersOP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginRight="@dimen/dp20"
+                android:drawableLeft="@drawable/ic_note"
+                android:drawablePadding="@dimen/dp10"
+                android:hint="Ghi chú"
+                android:inputType="textMultiLine"
+                android:maxLines="10"
+                android:minLines="4"
+                android:scrollbars="vertical"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/tvEditCommentFromUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp10"
+            tools:text="CHỜ XỬ LÝ"
+            android:padding="@dimen/dp10"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="@color/black" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp20"
+            android:layout_gravity="right">
+
+
+            <Button
+                android:id="@+id/btnEditKhongDuyetVouchers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/dp20"
+                android:text="Không duyệt"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse" />
+
+
+            <Button
+                android:id="@+id/btnEditDuyetVouchers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/dp20"
+                android:text="Duyệt"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse" />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

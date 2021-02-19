@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tool="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="com.tandm.abadeliverydriver.main.home.fragmentDriverHistory.salarypayslip.model.ItemPayslip" />
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        tool:cardCornerRadius="@dimen/dp10"
+        tool:cardElevation="@dimen/dp20"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp10"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="@{item.luongThangTitle}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textStyle="bold"
+                tools:text="Lương tháng 3"/>
+
+            <TextView
+                android:text="@{item.ten_Nhan_Vien}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                tools:text="Nguyễn Văn A"/>
+
+            <TextView
+                android:text="@{item.ma_Nhan_Vien}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                tools:text="8100201"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
+

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/dp5"
+    app:cardCornerRadius="@dimen/dp5"
+    android:elevation="@dimen/dp5"
+    android:background="@drawable/border_view">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dp5">
+
+        <TextView
+            android:id="@+id/tvTitleFee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="TẠM ỨNG PHÍ ĐI ĐƯỜNG"
+            android:background="@drawable/border_view_no_corner"
+            android:textSize="@dimen/sp20"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tvTitleShipmentID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitleFee"
+            android:gravity="center"
+            android:text="ATM_SH20200721-0201"
+            android:textSize="@dimen/sp18"
+            android:textColor="@color/black"
+            android:background="@drawable/border_view_no_corner"/>
+
+
+        <LinearLayout
+            android:id="@+id/lnExpenses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTitleShipmentID"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tiền Tạm Ứng:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp16"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Trưởng BP:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp16"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kế Toán:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp16"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tvAmountExpenses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2000000"
+                    android:gravity="end"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp16"/>
+
+
+                <TextView
+                    android:id="@+id/tvStatusManagerExpenses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Đang Chờ Xử Lý"
+                    android:gravity="end"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp16"/>
+
+                <TextView
+                    android:id="@+id/tvStatusFinExpenses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Đang Chờ Xử Lý"
+                    android:gravity="end"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp16"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_below="@+id/lnExpenses"
+            android:id="@+id/tvTimeCreateExpenses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textSize="@dimen/sp14"
+            android:text="2020-07-22T10:20:27.227" />
+
+    </RelativeLayout>
+
+
+
+
+
+</androidx.cardview.widget.CardView>

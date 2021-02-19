@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.tandm.abadeliverydriver.main.home.fragmenthomedriver.model.ShipmentBikerForDriver" />
+
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        app:cardCornerRadius="@dimen/dp10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/itemStoreCodeDriver"
+                android:text="@{item.storeCode}"
+                android:textSize="@dimen/sp25"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:background="@color/colorD68f00"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="@string/maCH"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:layout_width="@dimen/dp5"
+                    android:layout_height="0dp"/>
+
+                <TextView
+                    android:id="@+id/itemCHDriver"
+                    android:text="@{item.locationName}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="@string/addressCH"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:layout_width="@dimen/dp5"
+                    android:layout_height="0dp"/>
+
+                <TextView
+                    android:id="@+id/itemAddressDriver"
+                    android:text="@{item.addressLine}"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Tên Biker:"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:layout_width="@dimen/dp5"
+                    android:layout_height="0dp"/>
+
+                <TextView
+                    android:id="@+id/itemNameBiker"
+                    android:text="@{item.driverName}"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
+

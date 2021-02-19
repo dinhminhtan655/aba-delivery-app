@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.tandm.abadeliverydriver.main.home.fragmenthomedriver.model.StoreDriver" />
+
+
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        app:cardCornerRadius="@dimen/dp5">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/dp5">
+
+            <TextView
+                android:id="@+id/tvABAStoreCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{item.store_Code_ABA}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/black"
+                tools:text="Store Code" />
+
+            <TextView
+                android:id="@+id/tvStoreCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{item.store_Code}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/black"
+                tools:text="Store Code" />
+
+            <TextView
+                android:id="@+id/tvStoreName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{item.store_Name}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@color/black"
+                tools:text="Store Name" />
+
+            <TextView
+                android:id="@+id/tvStoreAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{item.addresS_LINE}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@color/black"
+                tools:text="Store Address" />
+
+            <TextView
+                android:id="@+id/tvStoreCustomer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{item.khachHang}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@color/black"
+                tools:text="Store Customer" />
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

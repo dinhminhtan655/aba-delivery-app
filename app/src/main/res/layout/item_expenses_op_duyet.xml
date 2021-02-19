@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.tandm.abadeliverydriver.main.home.fragmentfee2.advancepayment.model.ExpensesAmount" />
+
+    </data>
+
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:cardCornerRadius="@dimen/dp5"
+        app:cardElevation="@dimen/dp10"
+        android:padding="@dimen/dp5"
+        android:layout_margin="@dimen/dp5">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp5">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{item.advancePaymentType}"
+                    tools:text="TẠM ỨNG PHÍ THÁNG"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp18"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{item.employeeName}"
+                    tools:text="Đinh Minh Tân"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp14"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{item.employeeID}"
+                    tools:text="123890"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp14"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{item.formatCurrency}"
+                    tools:text="3000000"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp14"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{item.invoiceDate2}"
+                    tools:text="2020-08-13T18:07:38.527"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp14"/>
+
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/btnDongYDuyet"
+                android:background="@drawable/tick2"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:layout_width="@dimen/dp60"
+                android:layout_height="@dimen/dp60"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/dp30"/>
+
+            <View
+                android:layout_width="@dimen/dp20"
+                android:layout_height="0dp"/>
+
+            <ImageView
+                android:id="@+id/btnTuChoiDuyet"
+                android:background="@drawable/close2"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:layout_width="@dimen/dp60"
+                android:layout_height="@dimen/dp60"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/dp30"/>
+
+        </LinearLayout>
+
+        
+    </androidx.cardview.widget.CardView>
+
+</layout>
+

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.home.fragmentfee2.advancepayment.DetailExpensesAmountActivity">
+
+
+    <Button
+        android:id="@+id/btnBack"
+        android:backgroundTint="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trở Về"
+        android:src="@drawable/ic_arrow_left" />
+
+
+    <com.tandm.abadeliverydriver.main.utilities.HackyProblematicViewGroup
+        android:id="@+id/vpAttachmentExpenses"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/imgNoImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/noimage" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:layout_centerInParent="true"
+            android:background="#74000000"
+            android:text="Không có hình ảnh để hiển thị"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp25"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <include layout="@layout/bottom_sheet_expenses" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

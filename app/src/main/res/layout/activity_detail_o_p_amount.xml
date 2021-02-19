@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".main.home.fragmentfee2.paymentorder.DetailOPAmountActivity">
+
+
+    <com.tandm.abadeliverydriver.main.utilities.HackyProblematicViewGroup
+        android:layout_above="@+id/rvOPAmount"
+        android:id="@+id/vpAttachmentOP"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_above="@+id/rvOPAmount"
+        android:id="@+id/imgNoImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/noimage" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:layout_centerInParent="true"
+            android:background="#74000000"
+            android:text="Không có hình ảnh để hiển thị"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp25"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvOPAmount"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:listitem="@layout/item_detail_op_amount"/>
+
+
+</RelativeLayout>

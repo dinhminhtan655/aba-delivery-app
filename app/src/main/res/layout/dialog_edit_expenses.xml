@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp20"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        app:boxCornerRadiusBottomEnd="@dimen/dp10"
+        app:boxCornerRadiusBottomStart="@dimen/dp10"
+        app:boxCornerRadiusTopEnd="@dimen/dp10"
+        app:boxCornerRadiusTopStart="@dimen/dp10"
+        app:hintAnimationEnabled="true"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:hint="Số Tiền Tạm Ứng Cần Chỉnh Sửa"
+            android:id="@+id/edtDiaAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:textColor="@color/black"
+            android:inputType="number"
+            android:drawablePadding="@dimen/dp10"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp20"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        app:boxCornerRadiusBottomEnd="@dimen/dp10"
+        app:boxCornerRadiusBottomStart="@dimen/dp10"
+        app:boxCornerRadiusTopEnd="@dimen/dp10"
+        app:boxCornerRadiusTopStart="@dimen/dp10"
+        app:hintAnimationEnabled="true"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:hint="Ghi chú cần chỉnh sửa(nếu có)"
+            android:id="@+id/edtDiaNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="true"
+            android:inputType="textCapCharacters |textMultiLine"
+            android:maxLines="10"
+            android:minLines="4"
+            android:scrollbars="vertical"
+            android:textColor="@color/black"
+            android:drawablePadding="@dimen/dp10"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp10"
+        android:layout_marginLeft="@dimen/dp10"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnDiaHuy"
+            android:text="Hủy"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+        <Space
+            android:layout_width="@dimen/dp10"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnDiaDongY"
+            android:text="Đồng Ý"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

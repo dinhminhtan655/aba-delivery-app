@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp10"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:text="@string/tuchoi"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:textSize="@dimen/sp25"
+            android:background="@color/colorD68f00"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/dp10"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            app:boxCornerRadiusBottomEnd="@dimen/dp10"
+            app:boxCornerRadiusBottomStart="@dimen/dp10"
+            app:boxCornerRadiusTopEnd="@dimen/dp10"
+            app:boxCornerRadiusTopStart="@dimen/dp10"
+            app:hintAnimationEnabled="true"
+            android:layout_marginTop="@dimen/dp10">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtDialogDenied"
+                android:hint="@string/note2"
+                android:layout_margin="@dimen/dp10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="10"
+                android:minLines="4"
+                android:inputType="textMultiLine"
+                android:scrollbars="vertical"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

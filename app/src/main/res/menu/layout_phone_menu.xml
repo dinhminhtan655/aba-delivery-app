@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_phone"
+        android:icon="@drawable/call_24"
+        android:title="Liên hệ"
+        />
+
+    <item
+        android:id="@+id/menu_wait5"
+        android:icon="@drawable/time_24"
+        android:title="Đến trong 5 phút"
+        />
+
+    <item
+        android:id="@+id/menu_wait10"
+        android:icon="@drawable/time_24"
+        android:title="Đến trong 10 phút"
+        />
+
+    <item
+        android:id="@+id/menu_wait15"
+        android:icon="@drawable/time_24"
+        android:title="Đến trong 15 phút"
+        />
+
+</menu>

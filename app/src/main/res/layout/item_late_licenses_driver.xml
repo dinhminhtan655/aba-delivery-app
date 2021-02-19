@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.tandm.abadeliverydriver.main.home.fragmentvouchers.model.LateLicenses" />
+
+    </data>
+
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_margin="@dimen/dp10"
+        app:cardCornerRadius="@dimen/dp5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dp5"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{item.shipmentIDAndCus}"
+                tools:text="ATM_SH20201013-0056"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textAppearance="@style/TextAppearance.AppCompat.Inverse"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{item.ngayChay}"
+                tools:text="14-10-2020"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{item.ngayHen}"
+                tools:text="14-10-2020"
+                android:textColor="@color/black"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{item.trangThai}"
+                tools:text="CHỜ XỬ LÝ"
+                android:textColor="@color/black"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{item.ngayTao}"
+                tools:text="CHỜ XỬ LÝ"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:textColor="@color/black"
+                android:textAppearance="@style/Widget.AppCompat.Light.AutoCompleteTextView"/>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

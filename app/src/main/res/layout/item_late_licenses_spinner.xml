@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/itemAtmShipmentID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_marginLeft="@dimen/dp5"
+        tools:text="ATM_SH20201013-0056"
+        android:textColor="#000"
+        android:gravity="center_vertical"
+        android:textAppearance="@style/TextAppearance.AppCompat.Inverse"/>
+
+    <TextView
+        android:id="@+id/itemCustomer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_marginLeft="@dimen/dp5"
+        tools:text="VCMFRESH"
+        android:textColor="#000"
+        android:gravity="center_vertical"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+
+    <TextView
+        android:id="@+id/itemStartTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_marginLeft="@dimen/dp5"
+        tools:text="14/10/2020"
+        android:textColor="#000"
+        android:gravity="center_vertical"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+
+</LinearLayout>

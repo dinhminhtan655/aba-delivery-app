@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tool="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.tandm.abadeliverydriver.main.suco.fragment.ProblemChild" />
+
+    </data>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp10"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginTop="@dimen/dp5"
+            android:textColor="@color/black"
+            android:text="@{item.title}"
+            tool:text="Nhiệt độ không đạt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp25"/>
+
+        <View
+            android:background="@color/colorGrayC"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"/>
+
+    </LinearLayout>
+    
+    
+</layout>

@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.vipulasri:timelineview:1.1.3@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c468d5b0e0890c11172b3e780d1af533/jetified-timelineview-1.1.3/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c468d5b0e0890c11172b3e780d1af533/jetified-timelineview-1.1.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c468d5b0e0890c11172b3e780d1af533/jetified-timelineview-1.1.3/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c468d5b0e0890c11172b3e780d1af533/jetified-timelineview-1.1.3/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.vipulasri/timelineview/1.1.3/6c8fd691b198c16b7dfa44d3689ae4ea1beb27c9/timelineview-1.1.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.vipulasri/timelineview/1.1.3/8464fe83af8ecd5d4fe56fce7e3210fc0d72a876/timelineview-1.1.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

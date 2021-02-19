@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/dropdown"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp10"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+    <TextView
+        android:id="@+id/dropdownCustomer"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp10"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+
+    <TextView
+        android:id="@+id/dropdownStartTime"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp10"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp5"
+        android:background="#ad10af"/>
+
+</LinearLayout>

@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.nhanhang.NhanHangActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tbNhanHang"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center"
+            android:background="@color/colorPrimary"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:id="@+id/tvToolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="9"
+                    android:gravity="center"
+                    android:text="ĐƠN HÀNG VẬN CHUYỂN"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+                    android:textColor="#fff" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="@dimen/dp5"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvSoLuongCB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/tvSoLuongTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/dp10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:layout_marginBottom="@dimen/dp5"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Thời gian:"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                            android:textColor="#000" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mã cửa hàng:"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                            android:textColor="#000" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cửa hàng:"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                            android:textColor="#000" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Địa chỉ:"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                            android:textColor="#000" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvThoiGianNhanHang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+                        <TextView
+                            android:id="@+id/tvMaCuaHangNhanHang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+                        <TextView
+                            android:id="@+id/tvCuaHangNhanHang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+                        <TextView
+                            android:id="@+id/tvDiaChiNhanHang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+
+                    <CheckBox
+                        android:id="@+id/cbNhanGium"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.2"
+                        android:text="Nhận giùm"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"
+                        app:boxCornerRadiusBottomEnd="@dimen/dp10"
+                        app:boxCornerRadiusBottomStart="@dimen/dp10"
+                        app:boxCornerRadiusTopEnd="@dimen/dp10"
+                        app:boxCornerRadiusTopStart="@dimen/dp10"
+                        app:hintAnimationEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtMaCHNhanGium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:hint="Mã CH"
+                            android:inputType="number"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        app:boxCornerRadiusBottomEnd="@dimen/dp10"
+                        app:boxCornerRadiusBottomStart="@dimen/dp10"
+                        app:boxCornerRadiusTopEnd="@dimen/dp10"
+                        app:boxCornerRadiusTopStart="@dimen/dp10"
+                        app:hintAnimationEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtLyDoNhanGium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:hint="Lý do"
+                            android:inputType="textMultiLine"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        app:boxCornerRadiusBottomEnd="@dimen/dp10"
+                        app:boxCornerRadiusBottomStart="@dimen/dp10"
+                        app:boxCornerRadiusTopEnd="@dimen/dp10"
+                        app:boxCornerRadiusTopStart="@dimen/dp10"
+                        app:hintAnimationEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtSLThungXop"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp5"
+                            android:hint="Sl thùng xốp/kiện hàng giao CH "
+                            android:inputType="number"
+                            android:imeOptions="actionDone"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvNhanHang"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/dp70"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_items_pgh" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnCheckAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp15"
+        android:src="@drawable/ic_done_w"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_anchor="@id/rvNhanHang"
+        app:layout_anchorGravity="bottom|left"
+        app:tint="@color/white" />
+
+
+    <Button
+        android:id="@+id/btnTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp15"
+        android:text="Tổng: 0"
+        android:textColor="#ffff"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_anchor="@id/rvNhanHang"
+        app:layout_anchorGravity="bottom|center" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp15"
+        android:src="@drawable/ic_send"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_anchor="@id/rvNhanHang"
+        app:layout_anchorGravity="bottom|right"
+        app:tint="@color/white" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

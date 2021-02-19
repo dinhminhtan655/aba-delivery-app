@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="@dimen/dp10"
+    android:layout_width="@dimen/dp150"
+    android:layout_height="@dimen/dp100"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvStoreCodeVinMas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VCM-2386"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Overline"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/tvPackageItemVinMas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Vin"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Overline"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/tvVehicleVinMas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Biker"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Overline"
+            android:textColor="@color/black"
+            />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

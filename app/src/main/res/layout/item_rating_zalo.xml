@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/dp5"
+    app:cardCornerRadius="@dimen/dp5"
+    android:padding="@dimen/dp5">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dp5"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvOrderNumber"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:id="@+id/tvComment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.willy.ratingbar.ScaleRatingBar
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/simpleRatingBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srb_numStars="5"
+            app:srb_minimumStars="1"
+            app:srb_rating="2"
+            app:srb_starWidth="30dp"
+            app:srb_starHeight="30dp"
+            app:srb_starPadding="15dp"
+            app:srb_drawableEmpty="@drawable/star_filled">
+
+        </com.willy.ratingbar.ScaleRatingBar>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

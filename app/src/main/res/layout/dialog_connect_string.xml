@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dp5">
+
+    <RadioGroup
+        android:id="@+id/radiGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp5"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radiHttp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="http" />
+
+        <RadioButton
+            android:id="@+id/radiHttps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="https" />
+
+    </RadioGroup>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtLayoutUsername"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radiGroup"
+        android:layout_margin="@dimen/dp20"
+        app:boxCornerRadiusBottomEnd="@dimen/dp10"
+        app:boxCornerRadiusBottomStart="@dimen/dp10"
+        app:boxCornerRadiusTopEnd="@dimen/dp10"
+        app:boxCornerRadiusTopStart="@dimen/dp10"
+        app:hintAnimationEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edtDomain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/dp10"
+            android:hint="domain"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtLayoutUsername"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnHuy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp5"
+            android:layout_weight="1"
+            android:text="Hủy" />
+
+        <Button
+            android:id="@+id/btnDongY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp5"
+            android:layout_weight="1"
+            android:text="Đồng Ý" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

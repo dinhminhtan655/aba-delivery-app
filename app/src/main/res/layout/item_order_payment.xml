@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.tandm.abadeliverydriver.main.home.fragmentfee2.paymentorder.model.OrderPayment" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp5"
+        android:background="@drawable/border_view"
+        android:elevation="@dimen/dp5"
+        app:cardCornerRadius="@dimen/dp5">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dp5">
+
+            <TextView
+                android:id="@+id/tvTitleShipmentID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_view_no_corner"
+                android:gravity="center"
+                android:text="@{item.atmShipmentID}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp16"
+                android:textStyle="bold"
+                tools:text="ATM_SH20200715-0265" />
+
+
+            <TextView
+                android:id="@+id/tvStartTimeShipmentID"
+                android:layout_below="@id/tvTitleShipmentID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_view_no_corner"
+                android:gravity="center"
+                android:text="@{item.SplitStartTime(item.startTime)}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14"
+                tools:text="2020-09-06T00:00:00" />
+
+
+            <LinearLayout
+                android:id="@+id/lnExpenses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvStartTimeShipmentID"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dự án:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tổng Phí Tạm ứng:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14" />
+
+                    <TextView
+                        android:id="@+id/tvTitleAmountOP1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tổng Phí Đã Duyệt:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14" />
+
+                    <TextView
+                        android:id="@+id/tvTitleAmountOP2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tổng Phí Đã Duyệt:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14" />
+
+                    <TextView
+                        android:id="@+id/tvTitleAmountOPRemaining"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Còn Lại:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14" />
+
+
+                    <TextView
+                        android:id="@+id/tvTitleAmountOPRemaining2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Còn Lại:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/tvDuAnOP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="@{item.customer}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14"
+                        tools:text="VCMFRESH" />
+
+                    <TextView
+                        android:id="@+id/tvAmountOP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="@{item.formartVND(item.amountTotal)}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14"
+                        tools:text="2000000" />
+
+
+                    <TextView
+                        android:id="@+id/tvAmountOP1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:text="@{item.formartVND(item.amount)}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14"
+                        tools:text="2000000" />
+
+                    <TextView
+                        android:id="@+id/tvAmountOP2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{item.formartVND(item.amountAdjustment)}"
+                        tools:text="2000000"
+                        android:gravity="end"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14"/>
+
+                    <TextView
+                        android:id="@+id/tvAmountOPRemaining"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{item.totalRemaining(item.amountTotal, item.amount)}"
+                        tools:text="2000000"
+                        android:gravity="end"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14"/>
+
+
+                    <TextView
+                        android:id="@+id/tvAmountOPRemaining2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{item.totalRemaining2(item.amountTotal,item.amountAdjustment)}"
+                        tools:text="2000000"
+                        android:gravity="end"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvAdvancePaymentTypeOP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lnExpenses"
+                android:text="@{item.advancePaymentType}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14"
+                tools:text="PHÍ ĐẬU XE,PHÍ KHÁC,PHÍ RỬA XE" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

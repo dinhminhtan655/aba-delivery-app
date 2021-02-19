@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.tandm.abadeliverydriver.main.home.fragmenthome.Store2" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        app:cardCornerRadius="@dimen/dp10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/itemStoreCode"
+                android:text="@{item.fusionString()}"
+                android:textSize="@dimen/sp25"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@color/colorD68f00"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="@string/maCH"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:layout_width="@dimen/dp5"
+                    android:layout_height="0dp"/>
+
+                <TextView
+                    android:id="@+id/itemCH"
+                    android:text="@{item.store_Name}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="@string/addressCH"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:layout_width="@dimen/dp5"
+                    android:layout_height="0dp"/>
+
+                <TextView
+                    android:id="@+id/itemAddress"
+                    android:text="@{item.address}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/lnSLThung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="@string/totalCH2"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:layout_width="@dimen/dp5"
+                    android:layout_height="0dp"/>
+
+                <TextView
+                    android:id="@+id/itemSoThung"
+                    android:text="@{String.valueOf(item.totalCarton)}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp20"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:boxCornerRadiusBottomEnd="@dimen/dp10"
+                    app:boxCornerRadiusBottomStart="@dimen/dp10"
+                    app:boxCornerRadiusTopEnd="@dimen/dp10"
+                    app:boxCornerRadiusTopStart="@dimen/dp10"
+                    app:hintAnimationEnabled="true"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:hint="SL Thùng Giao"
+                        android:id="@+id/edtSLThungBiker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:drawablePadding="@dimen/dp10"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp10"
+                android:weightSum="2"
+                android:gravity="center">
+
+
+                <Button
+                    android:id="@+id/item_btnSuCo"
+                    android:text="@string/problem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <View
+                    android:layout_width="@dimen/dp10"
+                    android:layout_height="0dp"/>
+
+                <Button
+                    android:id="@+id/item_btnNhanHang"
+                    android:text="@string/delivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp10"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnGiao"
+                    android:text="@string/deliveryfull"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
+

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp5"
+    app:cardElevation="@dimen/dp5">
+
+    <RelativeLayout
+        android:id="@+id/rootView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp">
+
+
+
+
+        <TextView
+            android:id="@+id/tvOrderNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvOrderType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:layout_below="@id/tvOrderNumber"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvOrderDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvOrderType"
+            android:textColor="#000"
+            android:textSize="@dimen/sp12"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCustomer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvOrderDate"
+            android:textColor="#000"
+            android:textSize="@dimen/sp12"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvEDIOrderRemark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCustomer"
+            android:textColor="#000"
+            android:textSize="@dimen/sp12"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvStatusDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvEDIOrderRemark"
+            android:textColor="#000"
+            android:textSize="@dimen/sp12"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTimeSlot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvStatusDescription"
+            android:textColor="#000"
+            android:textSize="@dimen/sp12"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvVehicleType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTimeSlot"
+            android:textColor="#000"
+            android:textSize="@dimen/sp12"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvDockNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvVehicleType"
+            android:textColor="#000"
+            android:textSize="@dimen/sp12"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTotalWeights"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvDockNumber"
+            android:textColor="#000"
+            android:textSize="@dimen/sp12"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTotalQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTotalWeights"
+            android:textColor="#000"
+            android:textSize="@dimen/sp12"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvPhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTotalQuantity"
+            android:textColor="#000"
+            android:textSize="@dimen/sp12"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTruckNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPhoneNumber"
+            android:textColor="#000"
+            android:textSize="@dimen/sp12"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/ratingBar"
+            style="@style/Widget.AppCompat.RatingBar.Indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTruckNumber"
+            android:isIndicator="false"
+            android:progressBackgroundTintMode="@color/gray_light" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/ratingBar"
+            android:layout_marginTop="5dp"
+            android:background="#EEE" />
+
+
+        <TextView
+            android:id="@+id/tvCommentClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view1"
+            android:drawableLeft="@drawable/comment_16"
+            android:drawablePadding="5dp"
+            android:padding="5dp"
+            android:text="@string/trao_doi"
+            android:textColor="@color/color9197A3"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tvLastCommentBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCommentClick"
+            android:clickable="true"
+            android:paddingLeft="32dp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvLastComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvLastCommentBy"
+            android:clickable="true"
+            android:paddingLeft="32dp"
+            android:paddingBottom="10dp"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

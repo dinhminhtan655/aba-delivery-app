@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout>
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.tandm.abadeliverydriver.main.home.fragmenthomedriver.model.Shipment" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        app:cardCornerRadius="@dimen/dp10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/itemStoreCode"
+                android:text="@{item.atM_SHIPMENT_ID}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"/>
+
+            <TextView
+                android:id="@+id/itemCustomerCode"
+                android:text="@{item.getCustomerCodeSwap()}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"/>
+
+            <TextView
+                android:id="@+id/itemCheckStop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Overline"
+                android:text="@string/checkstop"
+                android:textAlignment="center"
+                android:textColor="@color/blue_assign"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:layout_marginTop="@dimen/dp5"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Bắt đầu"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Kết thúc"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:layout_marginTop="@dimen/dp2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="@{item.getDateStartTime(item.starT_TIME)}"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="@{item.getDateEndTime(item.enD_TIME)}"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:layout_marginTop="@dimen/dp2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="@{item.getTimeStartTime(item.starT_TIME)}"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="@{item.getTimeEndTime(item.enD_TIME)}"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/layoutBtnStart"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp10"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:text="@string/batdau"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+                    android:id="@+id/item_btnStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/layoutBtnAcceptDenied"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp10"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:text="@string/tuchoi"
+                    android:backgroundTint="@color/red"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+                    android:id="@+id/item_btnDenied"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <Space
+                    android:layout_width="@dimen/dp10"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:text="@string/nhanchuyen"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+                    android:id="@+id/item_btnAccepted"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</layout>

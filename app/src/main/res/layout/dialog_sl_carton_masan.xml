@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp10"
+    android:padding="@dimen/dp10"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        app:boxCornerRadiusBottomEnd="@dimen/dp10"
+        app:boxCornerRadiusBottomStart="@dimen/dp10"
+        app:boxCornerRadiusTopEnd="@dimen/dp10"
+        app:boxCornerRadiusTopStart="@dimen/dp10"
+        app:endIconMode="clear_text"
+        app:hintAnimationEnabled="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/itemEdtSLThungMasan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/cardboard"
+            android:drawablePadding="@dimen/dp10"
+            android:hint="SL Thùng giao"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal"
+            android:text="@{item.getTotalCarton(item.totalCarton)}" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        app:boxCornerRadiusBottomEnd="@dimen/dp10"
+        app:boxCornerRadiusBottomStart="@dimen/dp10"
+        app:boxCornerRadiusTopEnd="@dimen/dp10"
+        app:boxCornerRadiusTopStart="@dimen/dp10"
+        app:endIconMode="clear_text"
+        app:hintAnimationEnabled="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/itemEdtSLKhayThuHoi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/cardboard"
+            android:drawablePadding="@dimen/dp10"
+            android:hint="SL Khay thu hồi (khay đựng sản phẩm)"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal"
+            android:text="@{item.getTotalCarton(item.totalCarton)}" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp20"
+        android:layout_marginBottom="@dimen/dp20"
+        android:layout_gravity="right">
+
+        <Button
+            android:id="@+id/btnCloseCarton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/dp20"
+            android:text="Hủy"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse" />
+
+
+        <Button
+            android:id="@+id/btnSendCarton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/dp20"
+            android:text="Gửi"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

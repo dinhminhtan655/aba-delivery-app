@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.tandm.abadeliverydriver.main.home.fragmentfee2.paymentorder.model.DetailOrderPayment" />
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp5"
+        app:cardCornerRadius="@dimen/dp5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dp5"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvFeeName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{item.advancePaymentType}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp16"
+                android:textStyle="bold"
+                tools:text="PHÍ BỐC XẾP" />
+
+            <TextView
+                android:id="@+id/tvAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{item.amountHaveText}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14"
+                tools:text="20,000" />
+
+
+            <TextView
+                android:id="@+id/tvAmountAdjustment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{item.amountAdjustmentHaveText}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14"
+                tools:text="20,000" />
+
+
+            <TextView
+                android:id="@+id/tvAmountAdjustmentUDWho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{item.uDWho}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14"
+                tools:text="20,000" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvKTMaStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{item.KTMaStatus(item.opApproved, item.advancePaymentType)}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp14"
+                    tools:text="CHỜ XỬ LÝ" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvManagerStatus"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@{item.OPMaStatus(item.manager)}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14"
+                        tools:text="CHỜ XỬ LÝ" />
+
+                    <TextView
+                        android:id="@+id/tvManagerAmount"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@{item.opAmountHaveText}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14"
+                        tools:text="CHỜ XỬ LÝ" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvSEStatus"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@{item.SEStatus(item.seApproved)}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14"
+                        tools:text="CHỜ XỬ LÝ" />
+
+                    <TextView
+                        android:id="@+id/tvSEAmount"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@{item.seAmountHaveText}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14"
+                        tools:text="CHỜ XỬ LÝ" />
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvFINStatus"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@{item.FINStatus(item.finApproved)}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14"
+                        tools:text="CHỜ XỬ LÝ" />
+
+                    <TextView
+                        android:id="@+id/tvFinAmount"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@{item.finAmountHaveText}"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp14"
+                        tools:text="CHỜ XỬ LÝ" />
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{item.description}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14"
+                tools:text="huhu" />
+
+            <TextView
+                android:id="@+id/tvKhongDuyet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="@{item.getRemark(item.remark)}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp14"
+                tools:text="CHỜ XỬ LÝ" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@{item.getDateStartTime(item.invoiceDate)}"
+                android:textSize="@dimen/sp12"
+                tools:text="CHỜ XỬ LÝ" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnEdit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp5"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/gray_light"
+                    android:text="Sửa"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp10" />
+
+                <Button
+                    android:id="@+id/btnDel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp5"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/gray_light"
+                    android:text="Xóa"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp10" />
+
+                <Button
+                    android:id="@+id/btnDelPic"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp5"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/gray_light"
+                    android:text="Xóa Ảnh"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp10" />
+
+                <Button
+                    android:id="@+id/btnAddPic"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp5"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/gray_light"
+                    android:text="Thêm Ảnh"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp10" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/dp10"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".main.home.fragmenthomedrivercustomer.ThemNhapXuatFragment">
+
+
+    <TextView
+        android:text="Đăng ký vào kho ABA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="Loại:"
+            android:textColor="@color/black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"/>
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/spinOrderType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="Thời gian:"
+            android:textColor="@color/black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"/>
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/spinTimeSlot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="Loại xe:"
+            android:textColor="@color/black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"/>
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/spinVehicleType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="Cổng:"
+            android:textColor="@color/black"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"/>
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/spinDockList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edtOrderDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ngày/Tháng/Năm"
+        android:padding="@dimen/dp5"
+        android:background="@drawable/border_view_no_top"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_margin="@dimen/dp10"
+        android:focusable="false"/>
+
+    <EditText
+        android:id="@+id/edtSoXe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Số xe (VD: 51D12345)"
+        android:padding="@dimen/dp5"
+        android:background="@drawable/border_view_no_top"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_margin="@dimen/dp10"
+        android:imeOptions="actionNext"
+        android:maxLines="1"
+        android:singleLine="true"/>
+
+    <EditText
+        android:id="@+id/edtKhachHang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tên khách hàng"
+        android:padding="@dimen/dp5"
+        android:background="@drawable/border_view_no_top"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_margin="@dimen/dp10"
+        android:imeOptions="actionNext"
+        android:maxLines="1"
+        android:singleLine="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/dp10">
+
+        <EditText
+            android:id="@+id/edtTotalQuantity"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="Tổng số lượng"
+            android:inputType="number"
+            android:padding="@dimen/dp5"
+            android:background="@drawable/border_view_no_top"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginRight="@dimen/dp5"
+            android:imeOptions="actionNext"
+            />
+
+        <EditText
+            android:id="@+id/edtTotalWeights"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="Tổng khối lượng"
+            android:inputType="numberDecimal"
+            android:background="@drawable/border_view_no_top"
+            android:padding="@dimen/dp5"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginLeft="@dimen/dp5"
+            android:imeOptions="actionDone"/>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnHuy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Hủy"
+            android:layout_margin="@dimen/dp5"/>
+
+        <Button
+            android:id="@+id/btnDangKy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Đăng Ký"
+            android:layout_margin="@dimen/dp5"/>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.home.fragmentfee2.Fee2Fragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/dp10">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="@dimen/dp10"
+                android:layout_weight="1"
+                android:outlineProvider="bounds">
+
+
+                <ImageView
+                    android:id="@+id/imgTamUng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_view"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="@drawable/ripple"
+                    android:src="@drawable/thanhtoan" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#6A070000"
+                    android:gravity="center"
+                    android:text="Đề Nghị Tạm Ứng"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp25"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="@dimen/dp10"
+                android:layout_weight="1"
+                android:outlineProvider="bounds">
+
+                <ImageView
+                    android:id="@+id/imgThanhToan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_view"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="@drawable/ripple"
+                    android:src="@drawable/tamung" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="#6A070000"
+                    android:gravity="center"
+                    android:text="Đề Nghị Thanh Toán"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp25"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="@dimen/dp10"
+            android:layout_weight="1"
+            android:outlineProvider="bounds">
+
+
+            <ImageView
+                android:id="@+id/imgFeedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_view"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="@drawable/ripple"
+                android:src="@drawable/feedback" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="#6A070000"
+                android:gravity="center"
+                android:text="Góp Ý"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp25"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

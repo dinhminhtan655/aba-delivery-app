@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/dp10"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            app:cardCornerRadius="@dimen/dp10"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="THÔNG TIN BẢO MẬT"
+                    android:textColor="#000"
+                    android:textSize="@dimen/sp20"
+                    android:textStyle="bold"
+                    android:layout_margin="@dimen/dp10"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+                <TextView
+                    android:text="Vui lòng đổi mật khẩu để sử dụng app và bảo mật thông tin (bắt buộc)"
+                    android:textColor="#000"
+                    android:textSize="@dimen/sp15"
+                    android:textStyle="bold"
+                    android:layout_margin="@dimen/dp10"
+                    android:textAlignment="center"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:layout_marginRight="@dimen/dp20"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:boxCornerRadiusBottomEnd="@dimen/dp10"
+                    app:boxCornerRadiusBottomStart="@dimen/dp10"
+                    app:boxCornerRadiusTopEnd="@dimen/dp10"
+                    app:boxCornerRadiusTopStart="@dimen/dp10"
+                    app:hintAnimationEnabled="true"
+                    app:endIconMode="password_toggle"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:hint="Mật khẩu cũ"
+                        android:id="@+id/edtOldPassChange"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_vpn_key"
+                        android:inputType="textPassword"
+                        android:drawablePadding="@dimen/dp10"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:layout_marginRight="@dimen/dp20"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:boxCornerRadiusBottomEnd="@dimen/dp10"
+                    app:boxCornerRadiusBottomStart="@dimen/dp10"
+                    app:boxCornerRadiusTopEnd="@dimen/dp10"
+                    app:boxCornerRadiusTopStart="@dimen/dp10"
+                    app:hintAnimationEnabled="true"
+                    app:endIconMode="password_toggle"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:hint="Mật khẩu mới"
+                        android:id="@+id/edtNewPassChange"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_vpn_key"
+                        android:inputType="textPassword"
+                        android:drawablePadding="@dimen/dp10"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:layout_marginRight="@dimen/dp20"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:boxCornerRadiusBottomEnd="@dimen/dp10"
+                    app:boxCornerRadiusBottomStart="@dimen/dp10"
+                    app:boxCornerRadiusTopEnd="@dimen/dp10"
+                    app:boxCornerRadiusTopStart="@dimen/dp10"
+                    app:hintAnimationEnabled="true"
+                    app:endIconMode="password_toggle"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:hint="Xác nhận mật khẩu mới"
+                        android:id="@+id/edtConfirmNewPassChange"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_vpn_key"
+                        android:inputType="textPassword"
+                        android:drawablePadding="@dimen/dp10"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <LinearLayout
+                    android:layout_margin="@dimen/dp10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <Button
+                        android:text="Xóa"
+                        android:textColor="#fff"
+                        android:id="@+id/btnReset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="@dimen/dp20"
+                        android:background="@drawable/button_bg"/>
+
+                    <androidx.legacy.widget.Space
+                        android:layout_width="@dimen/dp10"
+                        android:layout_height="0dp" />
+
+                    <Button
+                        android:text="Đồng ý"
+                        android:textColor="#fff"
+                        android:id="@+id/btnOkay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="@dimen/dp20"
+                        android:background="@drawable/button_bg"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_margin="@dimen/dp10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:text="Đăng Xuất"
+                        android:textColor="#fff"
+                        android:id="@+id/btnDangXuat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_bg"/>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray_light"
+    tools:context=".main.home.fragmentDriverHistory.salarypershipment.SalaryDetailActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/dp10"
+        app:cardCornerRadius="@dimen/dp5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tvLuongChiTiet"
+                android:text="@string/chitietluong"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dp20"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="@string/loailuong"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+                    android:gravity="center"
+                    android:background="@drawable/outline_bottom_dark" />
+
+                <TextView
+                    android:text="@string/trigia"
+                    android:layout_weight="0.7"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+                    android:background="@drawable/outline_bottom_dark" />
+
+                <TextView
+                    android:text="@string/mieuta2"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textSize="@dimen/sp20"
+                    android:background="@drawable/outline_bottom_dark" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/lnTimeLine2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_above="@+id/cardTotal">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSalaryDetail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp10"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:listitem="@layout/item_salary_details"
+                />
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/dp10">
+
+            <TextView
+                android:id="@+id/tvTotalSalaryDetail"
+                android:text="Total: 0"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/sp20"
+                android:gravity="center"
+                android:padding="@dimen/dp5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

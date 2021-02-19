@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1049062167614",
+    "firebase_url": "https://abadeliverydriver.firebaseio.com",
+    "project_id": "abadeliverydriver",
+    "storage_bucket": "abadeliverydriver.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049062167614:android:27f6badb46149525c6ad6f",
+        "android_client_info": {
+          "package_name": "com.tandm.abadeliverydriver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1049062167614-f595qct2cge28jf4lhkt50sk9p1svavt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tandm.abadeliverydriver",
+            "certificate_hash": "d78978178c6a77b78b12dc540b48cbafba12bd5a"
+          }
+        },
+        {
+          "client_id": "1049062167614-e99j1l8akicdkvnsar1q63nvas5fjnpg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDT-TzHub1TtMQ_WSoKkYpD_JUWVzlYB9U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1049062167614-e99j1l8akicdkvnsar1q63nvas5fjnpg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

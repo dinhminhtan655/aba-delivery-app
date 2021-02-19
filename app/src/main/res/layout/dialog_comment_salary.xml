@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/edtDiaComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:hint="Nhập ý kiến"
+        android:inputType="textMultiLine"
+        android:lines="20"
+        android:minLines="5"
+        android:scrollbars="vertical"
+        android:scrollHorizontally="false"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp10"
+        android:layout_marginLeft="@dimen/dp10"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnDiaHuyComment"
+            android:text="Hủy"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+        <Space
+            android:layout_width="@dimen/dp10"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnDiaDongYComment"
+            android:text="Đồng Ý"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

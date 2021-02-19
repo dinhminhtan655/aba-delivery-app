@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light"
+    tools:context=".main.home.fragmenthome.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Spinner
+            android:id="@+id/spinBikerCustomer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:foreground="@drawable/dummy"
+            android:spinnerMode="dropdown" />
+
+        <LinearLayout
+            android:id="@+id/lnHomeBiker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinBikerCustomer"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp10">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:gravity="center"
+                app:hintAnimationEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtStoreID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_view_bot_top_right"
+                    android:drawableLeft="@drawable/ic_account_box"
+                    android:drawablePadding="@dimen/dp10"
+                    android:hint="Mã Cửa Hàng"
+                    android:imeOptions="actionDone"
+                    android:inputType="phone"
+                    android:textColorHint="@color/white">
+
+                    <requestFocus />
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <ImageButton
+                android:id="@+id/btnQRCode"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/border_view_no_corner"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:src="@drawable/qrcode" />
+
+
+            <ImageButton
+                android:id="@+id/btnFind"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/border_view_bot_top_left"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:src="@drawable/ic_search" />
+
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/tvPreStoreCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lnHomeBiker"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text=""
+            android:editable="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp20"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvStoreBikerVinMas"
+            android:layout_below="@+id/tvPreStoreCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:listitem="@layout/item_store_vinmas_biker"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardHomeBiker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rvStoreBikerVinMas"
+            app:cardCornerRadius="@dimen/dp10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:layout_marginBottom="@dimen/dp20"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Thời gian:"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mã cửa hàng:"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                            android:textColor="@color/black" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cửa hàng:"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                            android:textColor="@color/black" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Địa chỉ:"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvThoiGianNhanHang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                            android:textColor="@color/black"
+                            android:ellipsize="end"/>
+
+                        <TextView
+                            android:id="@+id/tvMaCuaHangNhanHang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                            android:textColor="@color/black"
+                            android:ellipsize="end"/>
+
+                        <TextView
+                            android:id="@+id/tvCuaHangNhanHang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                            android:textColor="@color/black"
+                            android:ellipsize="end"/>
+
+                        <TextView
+                            android:id="@+id/tvDiaChiNhanHang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                            android:textColor="@color/black"
+                            android:ellipsize="end" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <RelativeLayout
+            android:id="@+id/relaAlert2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/cardHomeBiker"
+            android:layout_margin="@dimen/dp40"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/dp5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/blue_assign"
+                        android:gravity="center"
+                        android:padding="@dimen/dp20"
+                        android:text="XÁC NHẬN"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dp25"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:src="@drawable/question" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:text="@string/thongbao4"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dp25" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp20"
+                        app:boxCornerRadiusBottomEnd="@dimen/dp10"
+                        app:boxCornerRadiusBottomStart="@dimen/dp10"
+                        app:boxCornerRadiusTopEnd="@dimen/dp10"
+                        app:boxCornerRadiusTopStart="@dimen/dp10"
+                        app:hintAnimationEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edtTotalCarton"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/cardboard"
+                            android:drawablePadding="@dimen/dp10"
+                            android:hint="SL Thùng"
+                            android:inputType="text" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <me.rishabhkhanna.customtogglebutton.CustomToggleButton
+                        android:layout_marginLeft="@dimen/dp20"
+                        android:layout_marginRight="@dimen/dp20"
+                        android:id="@+id/toggleBiker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textOn="Đã tới"
+                        android:textOff="Đã tới"
+                        app:checkedTextColor="#000"
+                        app:borderWidth="2dp"
+                        android:layout_weight="1.2"
+                        app:checkedColor="@color/green_arrived"
+                        app:radius="10dp"
+                        >
+                    </me.rishabhkhanna.customtogglebutton.CustomToggleButton>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnSuCoHomeBiker"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp10"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/red"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+                            android:text="Sự cố" />
+
+                        <Button
+                            android:id="@+id/btnXacNhanHomeBiker"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp10"
+                            android:layout_weight="1"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+                            android:text="Nhận hàng" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relaAlert1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/cardHomeBiker"
+            android:layout_margin="@dimen/dp40"
+            android:gravity="center"
+            android:visibility="visible">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/dp5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:padding="@dimen/dp20"
+                        android:text="THÔNG BÁO"
+                        android:textColor="@color/white"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Caption"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:src="@drawable/warning" />
+
+                    <TextView
+                        android:id="@+id/tvThongBaoBiker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:text="@string/thongbao5"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Inverse" />
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relaAlert3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/cardHomeBiker"
+            android:layout_margin="@dimen/dp40"
+            android:gravity="center"
+            android:visibility="gone">
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/dp5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/blue_assign"
+                        android:gravity="center"
+                        android:padding="@dimen/dp20"
+                        android:text="THÔNG BÁO"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dp25"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:src="@drawable/warning" />
+
+                    <TextView
+                        android:id="@+id/tvThongBaoBiker2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:text="@string/thongbao6"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dp25" />
+
+                </LinearLayout>
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</ScrollView>
+
+
+
+
+

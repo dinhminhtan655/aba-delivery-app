@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: me.rishabhkhanna:CustomToggle:1.0.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c724616448ba24645df5aa6e6912139c/jetified-CustomToggle-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c724616448ba24645df5aa6e6912139c/jetified-CustomToggle-1.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c724616448ba24645df5aa6e6912139c/jetified-CustomToggle-1.0.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.rishabhkhanna/CustomToggle/1.0.0/29e56b6af16a10e0df5b848db6ed7a6cf0961a72/CustomToggle-1.0.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.rishabhkhanna/CustomToggle/1.0.0/eb6320293a5444066bcf3f8259f40040832888f4/CustomToggle-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

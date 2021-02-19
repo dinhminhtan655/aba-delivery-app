@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_resize"
+    android:backgroundTint="#C3A07E7E"
+    android:backgroundTintMode="screen"
+    tools:context=".main.giaohang.ChupHinhGiaoHangActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarChupHinhGiaoHang"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="center"
+            android:background="@drawable/header_bg"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvToolbarChupHinhGiaoHang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/dp25"
+                android:text="Chụp Hình Giao Hàng"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="@dimen/sp16"
+                android:textStyle="bold" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/dp10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:layout_marginBottom="@dimen/dp20"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Thời gian:"
+                            android:textColor="#000"
+                            android:textSize="@dimen/sp15" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mã cửa hàng:"
+                            android:textColor="#000"
+                            android:textSize="@dimen/sp15" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cửa hàng:"
+                            android:textColor="#000"
+                            android:textSize="@dimen/sp15" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Địa chỉ:"
+                            android:textColor="#000"
+                            android:textSize="@dimen/sp15" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvThoiGianChupHinhGiaoHang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:textSize="@dimen/sp15" />
+
+                        <TextView
+                            android:id="@+id/tvMaCuaHangChupHinhGiaoHang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:textSize="@dimen/sp15" />
+
+                        <TextView
+                            android:id="@+id/tvCuaHangChupHinhGiaoHang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:textSize="@dimen/sp15" />
+
+                        <TextView
+                            android:id="@+id/tvDiaChiChupHinhGiaoHang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:textSize="@dimen/sp15" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardChupHinhGiaoHang"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dp5"
+            android:paddingBottom="@dimen/dp40"
+            app:cardCornerRadius="@dimen/dp10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:text="SL Lấy Từ Kho:"
+                            android:layout_margin="@dimen/dp10"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/tvSLThungNhan"
+                            android:layout_margin="@dimen/dp10"
+                            android:textColor="@color/black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp10"
+                            android:text="SL Giao CH:"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvSLThungGiao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp10"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/cbThieu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:text="Thiếu"/>
+
+                            <Space
+                                android:layout_width="@dimen/dp5"
+                                android:layout_height="wrap_content"/>
+
+                            <ImageButton
+                                android:id="@+id/btnTruThieu"
+                                android:layout_width="@dimen/dp40"
+                                android:layout_height="@dimen/dp40"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:src="@drawable/remove"
+                                />
+
+                            <TextView
+                                android:id="@+id/tvThieu"
+                                android:maxLength="2"
+                                android:inputType="number"
+                                android:textAlignment="center"
+                                android:layout_width="@dimen/dp40"
+                                android:layout_height="wrap_content" />
+
+                            <ImageButton
+                                android:id="@+id/btnCongThieu"
+                                android:layout_width="@dimen/dp40"
+                                android:layout_height="@dimen/dp40"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:src="@drawable/add"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/cbHong"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:text="Hỏng"/>
+
+                            <Space
+                                android:layout_width="@dimen/dp5"
+                                android:layout_height="wrap_content"/>
+
+                            <ImageButton
+                                android:id="@+id/btnTruHong"
+                                android:layout_width="@dimen/dp40"
+                                android:layout_height="@dimen/dp40"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:src="@drawable/remove"
+                                />
+
+                            <TextView
+                                android:id="@+id/tvHong"
+                                android:maxLength="2"
+                                android:inputType="number"
+                                android:textAlignment="center"
+                                android:layout_width="@dimen/dp40"
+                                android:layout_height="wrap_content"
+                                />
+
+                            <ImageButton
+                                android:id="@+id/btnCongHong"
+                                android:layout_width="@dimen/dp40"
+                                android:layout_height="@dimen/dp40"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:src="@drawable/add"
+                                />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <CheckBox
+                                    android:id="@+id/cbDu"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:text="Dư"/>
+
+                                <Space
+                                    android:layout_width="@dimen/dp5"
+                                    android:layout_height="wrap_content"/>
+
+                                <ImageButton
+                                    android:id="@+id/btnTruDu"
+                                    android:layout_width="@dimen/dp40"
+                                    android:layout_height="@dimen/dp40"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/remove"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/tvDu"
+                                    android:maxLength="2"
+                                    android:inputType="number"
+                                    android:textAlignment="center"
+                                    android:layout_width="@dimen/dp40"
+                                    android:layout_height="wrap_content"
+                                    />
+
+                                <ImageButton
+                                    android:id="@+id/btnCongDu"
+                                    android:layout_width="@dimen/dp40"
+                                    android:layout_height="@dimen/dp40"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/add"
+                                    />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/cbNhietDo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:text="℃ kém"/>
+
+                            <Space
+                                android:layout_width="@dimen/dp5"
+                                android:layout_height="wrap_content"/>
+
+                            <ImageButton
+                                android:id="@+id/btnTruNhietDo"
+                                android:layout_width="@dimen/dp40"
+                                android:layout_height="@dimen/dp40"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:src="@drawable/remove"
+                                />
+
+                            <TextView
+                                android:id="@+id/tvNhietDo"
+                                android:maxLength="2"
+                                android:inputType="number"
+                                android:textAlignment="center"
+                                android:layout_width="@dimen/dp40"
+                                android:layout_height="wrap_content" />
+
+                            <ImageButton
+                                android:id="@+id/btnCongNhietDo"
+                                android:layout_width="@dimen/dp40"
+                                android:layout_height="@dimen/dp40"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:src="@drawable/add"
+                                />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp5"
+                    app:boxCornerRadiusBottomEnd="@dimen/dp5"
+                    app:boxCornerRadiusBottomStart="@dimen/dp5"
+                    app:boxCornerRadiusTopEnd="@dimen/dp5"
+                    app:boxCornerRadiusTopStart="@dimen/dp5"
+
+                    app:hintAnimationEnabled="true">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtNoteDriver"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/note"
+                        android:inputType="textMultiLine"
+                        android:maxLines="8"
+                        android:minLines="4"
+                        android:scrollbars="vertical" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/imgDriver1"
+                            android:layout_width="@dimen/dp100"
+                            android:layout_height="@dimen/dp100"
+                            android:layout_alignEnd="@+id/buttonDriver1"
+                            android:layout_alignRight="@+id/buttonDriver1"
+                            android:layout_alignParentTop="true"
+                            android:src="@drawable/classiccamerapng" />
+
+                        <ImageButton
+                            android:id="@+id/buttonDriver1"
+                            android:layout_width="@dimen/dp60"
+                            android:layout_height="@dimen/dp60"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/ic_close_red"
+                            android:visibility="invisible" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/imgDriver2"
+                            android:layout_width="@dimen/dp100"
+                            android:layout_height="@dimen/dp100"
+                            android:layout_alignEnd="@+id/buttonDriver2"
+                            android:layout_alignRight="@+id/buttonDriver2"
+                            android:layout_alignParentTop="true"
+                            android:src="@drawable/classiccamerapng" />
+
+                        <ImageButton
+                            android:id="@+id/buttonDriver2"
+                            android:layout_width="@dimen/dp60"
+                            android:layout_height="@dimen/dp60"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/ic_close_red"
+                            android:visibility="invisible" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/imgDriver3"
+                            android:layout_width="@dimen/dp100"
+                            android:layout_height="@dimen/dp100"
+                            android:layout_alignEnd="@+id/buttonDriver3"
+                            android:layout_alignRight="@+id/buttonDriver3"
+                            android:layout_alignParentTop="true"
+                            android:src="@drawable/classiccamerapng" />
+
+                        <ImageButton
+                            android:id="@+id/buttonDriver3"
+                            android:layout_width="@dimen/dp60"
+                            android:layout_height="@dimen/dp60"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/ic_close_red"
+                            android:visibility="invisible" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/imgDriver4"
+                            android:layout_width="@dimen/dp100"
+                            android:layout_height="@dimen/dp100"
+                            android:layout_alignEnd="@+id/buttonDriver4"
+                            android:layout_alignRight="@+id/buttonDriver4"
+                            android:layout_alignParentTop="true"
+                            android:src="@drawable/classiccamerapng" />
+
+                        <ImageButton
+                            android:id="@+id/buttonDriver4"
+                            android:layout_width="@dimen/dp60"
+                            android:layout_height="@dimen/dp60"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/ic_close_red"
+                            android:visibility="invisible" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/imgDriver5"
+                            android:layout_width="@dimen/dp100"
+                            android:layout_height="@dimen/dp100"
+                            android:layout_alignEnd="@+id/buttonDriver5"
+                            android:layout_alignRight="@+id/buttonDriver5"
+                            android:layout_alignParentTop="true"
+                            android:src="@drawable/classiccamerapng" />
+
+                        <ImageButton
+                            android:id="@+id/buttonDriver5"
+                            android:layout_width="@dimen/dp60"
+                            android:layout_height="@dimen/dp60"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/ic_close_red"
+                            android:visibility="invisible" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/imgDriver6"
+                            android:layout_width="@dimen/dp100"
+                            android:layout_height="@dimen/dp100"
+                            android:layout_alignEnd="@+id/buttonDriver6"
+                            android:layout_alignRight="@+id/buttonDriver6"
+                            android:layout_alignParentTop="true"
+                            android:src="@drawable/classiccamerapng" />
+
+                        <ImageButton
+                            android:id="@+id/buttonDriver6"
+                            android:layout_width="@dimen/dp60"
+                            android:layout_height="@dimen/dp60"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/ic_close_red"
+                            android:visibility="invisible" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSendHinhAnhGiaoHang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gửi đi"
+        app:layout_anchor="@id/cardChupHinhGiaoHang"
+        app:layout_anchorGravity="bottom|left" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

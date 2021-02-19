@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuItem_remove"
+        android:title="Xóa Phí" />
+
+    <item
+        android:id="@+id/menuItem_edit"
+        android:title="Sửa Phí" />
+
+    <item
+        android:id="@+id/menuItem_add_image"
+        android:title="Thêm Hình" />
+
+    <item
+        android:id="@+id/menuItem_delete_image"
+        android:title="Xóa Hình Hiện Tại" />
+
+</menu>

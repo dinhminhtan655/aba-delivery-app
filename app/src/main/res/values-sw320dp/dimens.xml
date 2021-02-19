@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<dimen name="activity_horizontal_margin">10.72dp</dimen>
+<dimen name="activity_vertical_margin">10.72dp</dimen>
+<dimen name="dp1">0.67dp</dimen>
+<dimen name="dp2">1.34dp</dimen>
+<dimen name="dp3">2.01dp</dimen>
+<dimen name="dp4">2.68dp</dimen>
+<dimen name="dp5">3.3500001dp</dimen>
+<dimen name="dp6">4.02dp</dimen>
+<dimen name="dp7">4.69dp</dimen>
+<dimen name="dp8">5.36dp</dimen>
+<dimen name="dp9">6.03dp</dimen>
+<dimen name="dp10">6.7000003dp</dimen>
+<dimen name="dp11">7.3700004dp</dimen>
+<dimen name="dp12">8.04dp</dimen>
+<dimen name="dp13">8.71dp</dimen>
+<dimen name="dp14">9.38dp</dimen>
+<dimen name="dp15">10.05dp</dimen>
+<dimen name="dp16">10.72dp</dimen>
+<dimen name="dp17">11.39dp</dimen>
+<dimen name="dp18">12.06dp</dimen>
+<dimen name="dp19">12.7300005dp</dimen>
+<dimen name="dp20">13.400001dp</dimen>
+<dimen name="dp21">14.070001dp</dimen>
+<dimen name="dp22">14.740001dp</dimen>
+<dimen name="dp23">15.410001dp</dimen>
+<dimen name="dp24">16.08dp</dimen>
+<dimen name="dp25">16.75dp</dimen>
+<dimen name="dp30">20.1dp</dimen>
+<dimen name="dp40">26.800001dp</dimen>
+<dimen name="dp50">33.5dp</dimen>
+<dimen name="dp60">40.2dp</dimen>
+<dimen name="dp70">46.9dp</dimen>
+<dimen name="dp80">53.600002dp</dimen>
+<dimen name="dp90">60.300003dp</dimen>
+<dimen name="dp100">67.0dp</dimen>
+<dimen name="dp120">80.4dp</dimen>
+<dimen name="dp150">100.5dp</dimen>
+<dimen name="dp200">134.0dp</dimen>
+<dimen name="dp250">167.5dp</dimen>
+<dimen name="dp300">201.0dp</dimen>
+
+<dimen name="sp8">5.36sp</dimen>
+<dimen name="sp9">6.03sp</dimen>
+<dimen name="sp10">6.7000003sp</dimen>
+<dimen name="sp11">7.3700004sp</dimen>
+<dimen name="sp12">8.04sp</dimen>
+<dimen name="sp13">8.71sp</dimen>
+<dimen name="sp14">9.38sp</dimen>
+<dimen name="sp15">10.05sp</dimen>
+<dimen name="sp16">10.72sp</dimen>
+<dimen name="sp17">11.39sp</dimen>
+<dimen name="sp18">12.06sp</dimen>
+<dimen name="sp19">12.7300005sp</dimen>
+<dimen name="sp20">13.400001sp</dimen>
+<dimen name="sp21">14.070001sp</dimen>
+<dimen name="sp22">14.740001sp</dimen>
+<dimen name="sp23">15.410001sp</dimen>
+<dimen name="sp24">16.08sp</dimen>
+<dimen name="sp25">16.75sp</dimen>
+
+</resources>

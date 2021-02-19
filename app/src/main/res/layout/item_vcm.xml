@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/tvTitleKhay"
+                android:text="Khay Đỏ"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"/>
+
+            <CheckBox
+                android:id="@+id/cbItemsKhay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_weight="5"
+                android:checked="false"
+                android:gravity="center_vertical|end"/>
+
+        </LinearLayout>
+
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp15"
+            app:boxCornerRadiusBottomEnd="@dimen/dp10"
+            app:boxCornerRadiusBottomStart="@dimen/dp10"
+            app:boxCornerRadiusTopEnd="@dimen/dp10"
+            app:boxCornerRadiusTopStart="@dimen/dp10"
+            app:endIconMode="clear_text"
+            app:hintAnimationEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtKhayGiao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/cardboard"
+                android:drawablePadding="@dimen/dp10"
+                android:hint="SL Khay giao CH"
+                android:text="0"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp15"
+            app:boxCornerRadiusBottomEnd="@dimen/dp10"
+            app:boxCornerRadiusBottomStart="@dimen/dp10"
+            app:boxCornerRadiusTopEnd="@dimen/dp10"
+            app:boxCornerRadiusTopStart="@dimen/dp10"
+            app:endIconMode="clear_text"
+            app:hintAnimationEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtKhayLayVe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/cardboard"
+                android:drawablePadding="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp10"
+                android:hint="SL Khay lấy về từ CH"
+                android:text="0"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

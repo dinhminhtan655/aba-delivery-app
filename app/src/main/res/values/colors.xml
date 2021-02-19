@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3f51b5</color>
+    <color name="colorPrimaryDark">#3f51b5</color>
+    <color name="colorIndigoAccent">#f57c00</color>
+    <color name="colorLightGray">#EEE</color>
+    <color name="colorGrayD">#DDD</color>
+    <color name="colorGrayC">#CCC</color>
+    <color name="colorAlternativeRow">#A5D6A7</color>
+    <color name="bigcLightGreen">#ccff9a</color>
+    <color name="bigcLightCyan">#c7ecfc</color>
+    <color name="colorAlert">#7dff0000</color>
+    <color name="colorDCDEE3">#DCDEE3</color>
+    <color name="color9197A3">#9197A3</color>
+    <color name="color9197A4">#57172341</color>
+    <color name="colorD68f00">#d68f00</color>
+    <color name="black">#000</color>
+    <color name="fadeblack">#6F000000</color>
+    <color name="white">#FFF</color>
+    <color name="fadewhite">#65FFFFFF</color>
+    <color name="border">#444</color>
+    <color name="text_selected">#673ec3f0</color>
+    <color name="blue_assign">#0091D4</color>
+    <color name="blue_strong">#000BD4</color>
+    <color name="red">#f44336</color>
+    <color name="redfaded">#CBFD0000</color>
+    <color name="yellow_accept">#FFE599</color>
+    <color name="green_current">#8F6AA84F</color>
+    <color name="green_arrived">#8bc34a</color>
+    <color name="cream_accepted">#FFE599</color>
+    <color name="blue_assigned">#71058F</color>
+    <color name="gray_light">#E7DFDF</color>
+    <color name="pink">#FF71058F</color>
+</resources>

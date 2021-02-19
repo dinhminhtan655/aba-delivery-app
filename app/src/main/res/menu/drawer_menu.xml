@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group
+        android:id="@+id/groupDriver"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/home_drawer"
+            android:icon="@drawable/ic_home"
+            android:title="Trang chính" />
+
+        <item
+            android:id="@+id/home_driver_drawer"
+            android:icon="@drawable/ic_home"
+            android:title="Trang chính" />
+
+        <item
+            android:id="@+id/home_op_drawer"
+            android:icon="@drawable/ic_home"
+            android:title="Duyệt Tạm Ứng" />
+
+        <item
+            android:id="@+id/dieu_dong_driver_drawer"
+            android:icon="@drawable/qrcode"
+            android:title="Lệnh điều động" />
+
+        <item
+            android:id="@+id/trip_drawer"
+            android:icon="@drawable/ic_car"
+            android:title="Chuyến xe"
+            app:actionViewClass="android.widget.TextView" />
+
+        <item
+            android:id="@+id/giao_bu_drawer"
+            android:icon="@drawable/giao_bu_black"
+            android:title="Giao bù" />
+
+        <item
+            android:id="@+id/history_biker_drawer"
+            android:icon="@drawable/giao_bu_black"
+            android:title="Lịch sử giao hàng" />
+
+        <item
+            android:id="@+id/history_drawer"
+            android:icon="@drawable/ic_history"
+            android:title="Lịch sử giao hàng" />
+
+        <item
+            android:id="@+id/vouchers_drawer"
+            android:icon="@drawable/ic_note"
+            android:title="Chứng từ" />
+
+
+        <item
+            android:id="@+id/fee_drawer"
+            android:icon="@drawable/ic_money"
+            android:title="Phí" />
+
+        <item
+            android:id="@+id/history_driver_drawer"
+            android:icon="@drawable/ic_history"
+            android:title="Lịch sử giao hàng" />
+
+        <item
+            android:id="@+id/late_licenses_op_drawer"
+            android:icon="@drawable/ic_note"
+            android:title="Chứng từ trễ" />
+
+        <item
+            android:id="@+id/information_drawer"
+            android:icon="@drawable/account_circle_24"
+            android:title="Thông tin" />
+
+        <item
+            android:id="@+id/update_software_drawer"
+            android:icon="@drawable/ic_update"
+            android:title="Cập nhật App" />
+
+        <item
+            android:id="@+id/pass_drawer"
+            android:icon="@drawable/ic_settings"
+            android:title="Đổi mật khẩu" />
+
+
+    </group>
+
+    <group
+        android:id="@+id/groupBiker"
+        android:checkableBehavior="single"></group>
+
+    <group
+        android:id="@+id/groupOP"
+        android:checkableBehavior="single"></group>
+
+    <group
+        android:id="@+id/groupKH"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/home_driver_customer_drawer"
+            android:icon="@drawable/ic_home"
+            android:title="Trang chính" />
+    </group>
+
+</menu>

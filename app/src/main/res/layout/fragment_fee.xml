@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_resize"
+    android:backgroundTint="#C3A07E7E"
+    android:backgroundTintMode="screen"
+    tools:context=".main.home.fragmentfee.FeeFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/dp10"
+        app:cardCornerRadius="@dimen/dp10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinFee"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:layout_margin="@dimen/dp20"
+                android:spinnerMode="dropdown"/>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp20"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                app:boxCornerRadiusBottomEnd="@dimen/dp10"
+                app:boxCornerRadiusBottomStart="@dimen/dp10"
+                app:boxCornerRadiusTopEnd="@dimen/dp10"
+                app:boxCornerRadiusTopStart="@dimen/dp10"
+                app:hintAnimationEnabled="true"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:hint="Số Tiền"
+                    android:id="@+id/edtMoneyFee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:imeOptions="actionDone"
+                    android:drawableLeft="@drawable/ic_money"
+                    android:drawablePadding="@dimen/dp10"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp20"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                app:boxCornerRadiusBottomEnd="@dimen/dp10"
+                app:boxCornerRadiusBottomStart="@dimen/dp10"
+                app:boxCornerRadiusTopEnd="@dimen/dp10"
+                app:boxCornerRadiusTopStart="@dimen/dp10"
+                app:hintAnimationEnabled="true"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:hint="Ghi chú (nếu có)"
+                    android:id="@+id/edtNoteFee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="10"
+                    android:minLines="4"
+                    android:inputType="textMultiLine"
+                    android:scrollbars="vertical"
+                    android:drawableLeft="@drawable/ic_note"
+                    android:drawablePadding="@dimen/dp10"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imgFee"
+                    android:layout_width="@dimen/dp200"
+                    android:layout_height="@dimen/dp200"
+                    android:src="@drawable/classiccamerapng"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignRight="@+id/btnCloseImageFee"
+                    android:layout_alignEnd="@+id/btnCloseImageFee"
+                    />
+
+                <ImageButton
+                    android:visibility="invisible"
+                    android:id="@+id/btnCloseImageFee"
+                    android:layout_width="@dimen/dp80"
+                    android:layout_height="@dimen/dp80"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/ic_close_red"/>
+
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/btnSendFee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gửi"
+                android:layout_margin="@dimen/dp20"/>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+</FrameLayout>

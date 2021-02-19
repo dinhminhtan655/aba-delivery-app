@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.tandm.abadeliverydriver.main.home.fragmentDriverHistory.salarypershipment.model.Items" />
+
+    </data>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.github.vipulasri.timelineview.TimelineView
+            android:id="@+id/timeline"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:markerSize="@dimen/dp25"
+            app:lineWidth="@dimen/dp4"
+            app:lineOrientation="vertical"
+            app:lineStyle="normal"
+            app:startLineColor="@color/green_current"
+            app:endLineColor="@color/green_current"
+            app:linePadding="@dimen/dp5"/>
+
+
+        <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp5"
+            android:elevation="@dimen/dp5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/dp10"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:text="@{item.date}"
+                    tools:text="05/03/2020" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/dp10"
+                    android:text="@{item.shipmenT_ID}"
+                    android:textColor="@color/black"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    tools:text="ATM_SH20200310-226" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/dp10"
+                    android:text="@{item.status}"
+                    android:textColor="@color/black"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    tools:text="Chạy tốt lắm cố lên..." />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/dp10"
+                    android:text="@{item.comment}"
+                    android:textColor="@color/black"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    tools:text="fsdfsdfkljsdakl" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:paddingEnd="@dimen/dp10"
+                    android:text="@{item.salary}"
+                    android:textColor="@color/black"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:textStyle="bold"
+                    tools:text="500.000" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</layout>
+
+
