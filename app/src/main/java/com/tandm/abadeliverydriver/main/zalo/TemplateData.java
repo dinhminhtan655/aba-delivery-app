@@ -6,6 +6,7 @@ public class TemplateData {
     public String deliveryorder_id;
     public String customer_name;
     public String truck_number;
+    public String order_ID;
 
     public TemplateData(String staff_name, String date_time, String deliveryorder_id, String customer_name, String truck_number) {
         this.staff_name = staff_name;
@@ -13,5 +14,9 @@ public class TemplateData {
         this.deliveryorder_id = deliveryorder_id;
         this.customer_name = customer_name;
         this.truck_number = truck_number;
+    }
+
+    public TemplateData(String order_ID) {
+        this.order_ID = order_ID;
     }
 }

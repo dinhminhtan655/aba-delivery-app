@@ -49,6 +49,7 @@ import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.single.PermissionListener;
 import com.tandm.abadeliverydriver.R;
 import com.tandm.abadeliverydriver.main.api.MyRetrofit;
+import com.tandm.abadeliverydriver.main.api.MyRetrofit2;
 import com.tandm.abadeliverydriver.main.api.NoInternet;
 import com.tandm.abadeliverydriver.main.api.RetrofitError;
 import com.tandm.abadeliverydriver.main.home.MainActivity;
@@ -62,6 +63,7 @@ import com.tandm.abadeliverydriver.main.service.SendLocationToFragment2;
 import com.tandm.abadeliverydriver.main.utilities.Utilities;
 import com.tandm.abadeliverydriver.main.zalo.TemplateData;
 import com.tandm.abadeliverydriver.main.zalo.TemplateDataParent2;
+import com.tandm.abadeliverydriver.main.zalo.Zalo;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -118,7 +120,7 @@ public class BHXIceActivity extends AppCompatActivity {
     TextInputEditText edtIceGiao;
     View view;
 
-    String strStoreCode, strToken, strDate, strDate2, strName, strCustomerCode, strShipment = "", strOrdeR_RELEASE_XID = "", strPackaged_Item_XID = "", ID = "",strLat = "0.0",strLng = "0.0";
+    String strStoreCode, strToken, strDate, strDate2, strName, strCustomerCode, strShipment = "", strOrdeR_RELEASE_XID = "", strPackaged_Item_XID = "", ID = "",strLat = "0.0",strLng = "0.0", strPhoneNumber = "";
 
     ProgressDialog progressDialog;
 
@@ -151,6 +153,7 @@ public class BHXIceActivity extends AppCompatActivity {
             tvMaCuaHangNhanHangBHXICE.setText(strStoreCode);
             tvCuaHangNhanHangBHXICE.setText(b.getString("storename"));
             tvDiaChiNhanHangBHXICE.setText(strName);
+            strPhoneNumber = b.getString("phonenumber");
         }
 //        init();
 
@@ -327,22 +330,7 @@ public class BHXIceActivity extends AppCompatActivity {
                                                             if (response.isSuccessful() && response.body() != null) {
                                                                 if (response.body() == 1) {
                                                                     Snackbar.make(view, "Đã gửi!", Snackbar.LENGTH_LONG).show();
-                                                                    TemplateDataParent2 templateDataParentRating = new TemplateDataParent2("84906700164", "202474",new TemplateData("","","","",""), "3");
-//                                                                    MyRetrofit2.initRequest2().SendZaloRating(templateDataParentRating).enqueue(new Callback<Zalo>() {
-//                                                                        @Override
-//                                                                        public void onResponse(Call<Zalo> call, Response<Zalo> response) {
-//                                                                            if (response.isSuccessful() && response.body() != null) {
-//                                                                                if (response.body().message.equals("Success")) {
-//                                                                                    Toast.makeText(BHXIceActivity.this, "Thành công", Toast.LENGTH_SHORT).show();
-//                                                                                }
-//                                                                            }
-//                                                                        }
-//
-//                                                                        @Override
-//                                                                        public void onFailure(Call<Zalo> call, Throwable t) {
-//                                                                            Toast.makeText(BHXIceActivity.this, "Vui lòng kiểm tra Internet", Toast.LENGTH_SHORT).show();
-//                                                                        }
-//                                                                    });
+                                                                    sendStarZalo(strPhoneNumber);
                                                                     Intent intent = new Intent(BHXIceActivity.this, MainActivity.class);
                                                                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                                                     startActivity(intent);
@@ -549,5 +537,27 @@ public class BHXIceActivity extends AppCompatActivity {
         int permissionState = ActivityCompat.checkSelfPermission(this,
                 Manifest.permission.ACCESS_FINE_LOCATION);
         return permissionState == PackageManager.PERMISSION_GRANTED;
+    }
+
+    private void sendStarZalo(String phone) {
+
+        TemplateDataParent2 templateDataParentRating = new TemplateDataParent2(phone, "203044",
+                new TemplateData(strOrdeR_RELEASE_XID), "3");
+
+        MyRetrofit2.initRequest2().SendZaloRating(templateDataParentRating).enqueue(new Callback<Zalo>() {
+            @Override
+            public void onResponse(Call<Zalo> call, Response<Zalo> response) {
+                if (response.isSuccessful() && response.body() != null) {
+                    if (response.body().message.equals("Success")) {
+                        Toast.makeText(BHXIceActivity.this, "Thành công", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Zalo> call, Throwable t) {
+                Toast.makeText(BHXIceActivity.this, "Vui lòng kiểm tra Internet", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

@@ -89,7 +89,7 @@ public class Utilities extends WifiHelper {
     }
 
     public static final String getURLImage(Context context) {
-        String IMAGE_BASE_URL = String.format("%s://%s/Attachments3/", !ConnectStringPrefer.getDomain(context).equals("") ? ConnectStringPrefer.getDomain(context) : "api-delivery.aba.com.vn:44567");
+        String IMAGE_BASE_URL = String.format("%s://%s/Attachments3/", ConnectStringPrefer.getSSLOrNoSSL(context),!ConnectStringPrefer.getDomain(context).equals("") ? ConnectStringPrefer.getDomain(context) : "api-delivery.aba.com.vn:44567");
         return IMAGE_BASE_URL;
     }
 

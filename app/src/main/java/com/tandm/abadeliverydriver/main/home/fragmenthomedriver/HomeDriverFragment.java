@@ -748,6 +748,8 @@ public class HomeDriverFragment extends Fragment implements SwipeRefreshLayout.O
         i.putExtra("atmshipmentid", strShipment);
         i.putExtra("orderreleasexid", strOrdeR_RELEASE_XID);
         i.putExtra("packageditemxid", strPackaged_Item_XID);
+        i.putExtra("phonenumber", strPhoneNumber);
+
         startActivity(i);
     }
 
@@ -762,6 +764,7 @@ public class HomeDriverFragment extends Fragment implements SwipeRefreshLayout.O
         i.putExtra("atmshipmentid", strShipment);
         i.putExtra("orderreleasexid", strOrdeR_RELEASE_XID);
         i.putExtra("packageditemxid", strPackaged_Item_XID);
+        i.putExtra("phonenumber", strPhoneNumber);
         startActivity(i);
     }
 
@@ -962,7 +965,7 @@ public class HomeDriverFragment extends Fragment implements SwipeRefreshLayout.O
                                                                             Utilities.dismissDialog(progressDialog);
                                                                             dialog.dismiss();
 
-                                                                            sendStarZalo("84903631331");
+                                                                            sendStarZalo(strPhoneNumber);
 
                                                                             new GenericDialog.Builder(getContext())
                                                                                     .setIcon(R.drawable.completed)
@@ -1109,7 +1112,7 @@ public class HomeDriverFragment extends Fragment implements SwipeRefreshLayout.O
                                                                         public void onResponse(Call<String> call, Response<String> response) {
                                                                             if (response.isSuccessful() && response != null) {
                                                                                 Snackbar.make(view, "Giao Hub thành công!", Snackbar.LENGTH_LONG).show();
-                                                                                sendStarZalo("84903631331");
+                                                                                sendStarZalo(strPhoneNumber);
                                                                                 new Handler().postDelayed(new Runnable() {
                                                                                     @Override
                                                                                     public void run() {
@@ -1225,13 +1228,13 @@ public class HomeDriverFragment extends Fragment implements SwipeRefreshLayout.O
                 }
                 break;
             case R.id.menu_wait5:
-                sendTimeZalo("84903631331", "5 phút");
+                sendTimeZalo(strPhoneNumber, "5 phút");
                 break;
             case R.id.menu_wait10:
-                sendTimeZalo("84903631331", "10 phút");
+                sendTimeZalo(strPhoneNumber, "10 phút");
                 break;
             case R.id.menu_wait15:
-                sendTimeZalo("84903631331", "15 phút");
+                sendTimeZalo(strPhoneNumber, "15 phút");
                 break;
         }
         return true;
@@ -2013,8 +2016,8 @@ public class HomeDriverFragment extends Fragment implements SwipeRefreshLayout.O
 
     private void sendStarZalo(String phone) {
 
-        TemplateDataParent2 templateDataParentRating = new TemplateDataParent2(phone, "202474",
-                new TemplateData("", "", "", "", ""), "3");
+        TemplateDataParent2 templateDataParentRating = new TemplateDataParent2(phone, "203044",
+                new TemplateData(strOrdeR_RELEASE_XID), "3");
 
         MyRetrofit2.initRequest2().SendZaloRating(templateDataParentRating).enqueue(new Callback<Zalo>() {
             @Override
