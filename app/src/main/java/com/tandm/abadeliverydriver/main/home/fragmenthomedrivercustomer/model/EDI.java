@@ -3,7 +3,8 @@ package com.tandm.abadeliverydriver.main.home.fragmenthomedrivercustomer.model;
 import com.google.gson.annotations.SerializedName;
 
 public class EDI {
-
+    @SerializedName("EDI_OrderID")
+    public String eDI_OrderID;
     @SerializedName("OrderDate")
     public String orderDate;
     @SerializedName("TruckNumber")
@@ -40,6 +41,8 @@ public class EDI {
     public String eDI_OrderTypeDescription;
     @SerializedName("EDI_OrderType")
     public String eDI_OrderType;
+    @SerializedName("IsArrived")
+    public boolean IsArrived;
 
     public float getRatingValue() {
         return ratingValue;
@@ -47,5 +50,21 @@ public class EDI {
 
     public void setRatingValue(float ratingValue) {
         this.ratingValue = ratingValue;
+    }
+
+    public String getStatusDescription() {
+        return statusDescription;
+    }
+
+    public void setStatusDescription(String statusDescription) {
+        this.statusDescription = statusDescription;
+    }
+
+    public boolean isArrived() {
+        return IsArrived;
+    }
+
+    public void setArrived(boolean arrived) {
+        IsArrived = arrived;
     }
 }

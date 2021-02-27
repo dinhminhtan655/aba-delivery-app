@@ -1047,4 +1047,30 @@ public interface MyRequests {
     );
 
 
+    @FormUrlEncoded
+    @POST("api/EDI_OrdersUpdateStatus")
+    Call<String> updateStatusArrive(@Field("EDI_OrderID") String EDI_OrderID,
+                                     @Field("UserName") String UserName,
+                                     @Field("DeviceNumber") String DeviceNumber,
+                                     @Field("StatusDescription") String StatusDescription
+    );
+
+    @FormUrlEncoded
+    @POST("api/EDI_OrdersUpdate")
+    Call<String> deleteEDI(@Field("EDI_OrderID") String EDI_OrderID,
+                                    @Field("UserName") String UserName,
+                                    @Field("DeviceNumber") String DeviceNumber,
+                                    @Field("OrderDate") String OrderDate,
+                                    @Field("TimeSlotID") String TimeSlotID,
+                                    @Field("TruckNumber") String TruckNumber,
+                                    @Field("CustomerReference") String CustomerReference,
+                                    @Field("TotalQuantity") String TotalQuantity,
+                                    @Field("TotalWeights") String TotalWeights,
+                                    @Field("VehicleType") String VehicleType,
+                                    @Field("DockDoorID") String DockDoorID,
+                                    @Field("OrderType") String OrderType,
+                                    @Field("Flag") String Flag
+    );
+
+
 }

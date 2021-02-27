@@ -14,9 +14,6 @@
         android:paddingTop="10dp"
         android:paddingRight="10dp">
 
-
-
-
         <TextView
             android:id="@+id/tvOrderNumber"
             android:layout_width="wrap_content"
@@ -24,12 +21,20 @@
             android:textColor="#000"
             android:textStyle="bold" />
 
+        <ImageView
+            android:id="@+id/imgDown"
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp30"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:src="@drawable/ic_hardware_keyboard_arrow_down_12dip" />
+
         <TextView
             android:id="@+id/tvOrderType"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#000"
             android:layout_below="@id/tvOrderNumber"
+            android:textColor="#000"
             android:textStyle="bold" />
 
         <TextView
@@ -67,6 +72,16 @@
             android:textColor="#000"
             android:textSize="@dimen/sp12"
             android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/cbIsArrived"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvEDIOrderRemark"
+            android:layout_alignRight="@+id/tvStatusDescription"
+            android:layout_alignParentRight="true"
+            android:text="Đã đến"
+            android:textSize="@dimen/sp12" />
 
         <TextView
             android:id="@+id/tvTimeSlot"

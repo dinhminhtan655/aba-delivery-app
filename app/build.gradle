@@ -8,8 +8,8 @@ android {
         applicationId "com.tandm.abadeliverydriver"
         minSdkVersion 19
         targetSdkVersion 29
-        versionCode 93 //92
-        versionName "9.1"   //9.0
+        versionCode 96 //92
+        versionName "9.3"   //9.0
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }

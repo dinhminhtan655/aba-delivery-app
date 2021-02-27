@@ -1,14 +1,22 @@
 package com.tandm.abadeliverydriver.main.home.fragmenthomedrivercustomer.adapter;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Parcelable;
+import android.provider.Settings;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.ImageView;
+import android.widget.PopupMenu;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,6 +30,7 @@ import com.tandm.abadeliverydriver.main.api.MyRetrofitWMS;
 import com.tandm.abadeliverydriver.main.api.NoInternet;
 import com.tandm.abadeliverydriver.main.api.RetrofitError;
 import com.tandm.abadeliverydriver.main.home.fragmenthomedrivercustomer.CommentActivity;
+import com.tandm.abadeliverydriver.main.home.fragmenthomedrivercustomer.UpdateNhapXuatActivity;
 import com.tandm.abadeliverydriver.main.home.fragmenthomedrivercustomer.model.EDI;
 import com.tandm.abadeliverydriver.main.preference.LoginPrefer;
 import com.tandm.abadeliverydriver.main.utilities.Utilities;
@@ -35,7 +44,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class EDIAdapter extends RecyclerView.Adapter<EDIAdapter.EDIViewHolder> {
+public class EDIAdapter extends RecyclerView.Adapter<EDIAdapter.EDIViewHolder>{
 
     private static final String TAG = "EDIAdapter";
     private List<EDI> edis;
@@ -45,6 +54,7 @@ public class EDIAdapter extends RecyclerView.Adapter<EDIAdapter.EDIViewHolder> {
     private Parcelable recyclerViewState;
     private ProgressDialog progressDialog;
     private int REQUEST_CODE;
+    private EDI edi;
 
     public EDIAdapter(List<EDI> edis, Context context, RecyclerView recyclerView, int REQUEST_CODE) {
         this.edis = edis;
@@ -63,7 +73,7 @@ public class EDIAdapter extends RecyclerView.Adapter<EDIAdapter.EDIViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull EDIViewHolder holder, int position) {
         Handler handler = new Handler();
-        EDI edi = edis.get(holder.getAdapterPosition());
+        edi = edis.get(holder.getAdapterPosition());
         holder.tvOrderType.setText(String.format("Loại đơn: %s", edi.eDI_OrderTypeDescription));
         holder.tvOrderNumber.setText(String.format("Mã đơn: %s", edi.orderNumber == null ? "" : edi.orderNumber));
         holder.tvOrderDate.setText(Utilities.formatDate_ddMMyyyy(edi.orderDate));
@@ -85,6 +95,7 @@ public class EDIAdapter extends RecyclerView.Adapter<EDIAdapter.EDIViewHolder> {
             holder.tvLastCommentBy.setVisibility(View.GONE);
             holder.tvLastComment.setVisibility(View.GONE);
         }
+        holder.cbIsArrived.setChecked(edis.get(holder.getAdapterPosition()).IsArrived);
         recyclerViewState = recyclerView.getLayoutManager().onSaveInstanceState();
 
         holder.voHieuHoaRatingBar(position);
@@ -117,9 +128,63 @@ public class EDIAdapter extends RecyclerView.Adapter<EDIAdapter.EDIViewHolder> {
             }
         });
 
-        if (edi.commentBy.length() > 0) {
+        holder.imgDown.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PopupMenu popupMenu = new PopupMenu(context, v);
+                popupMenu.getMenuInflater().inflate(R.menu.qhse_options, popupMenu.getMenu());
+                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        switch (item.getItemId()) {
+                            case R.id.action_qhse_edit:
+                                Toast.makeText(context, "edit", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(context, UpdateNhapXuatActivity.class);
+//                        intent.putExtra()
+                                context.startActivity(intent);
+                                break;
 
-        }
+                            case R.id.action_qhse_delete:
+                                Toast.makeText(context, edis.get(holder.getAdapterPosition()).eDI_OrderID + "/" + holder.getAdapterPosition(), Toast.LENGTH_SHORT).show();
+                                alertDelete(edi.eDI_OrderID, holder.getAdapterPosition());
+                                break;
+                        }
+                        return false;
+                    }
+                });
+                popupMenu.show();
+            }
+        });
+
+        holder.cbIsArrived.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    MyRetrofitWMS.initRequest().updateStatusArrive(edi.eDI_OrderID,LoginPrefer.getUsername(context), Settings.Secure.getString(context.getContentResolver(),
+                            Settings.Secure.ANDROID_ID),"Đã đến").enqueue(new Callback<String>() {
+                        @Override
+                        public void onResponse(Call<String> call, Response<String> response) {
+                                if (response.isSuccessful() && response.body() != null){
+                                    if (!response.body().equals("00000000-0000-0000-0000-000000000000")){
+                                        edis.get(holder.getAdapterPosition()).setArrived(true);
+                                        holder.cbIsArrived.setChecked(edis.get(holder.getAdapterPosition()).IsArrived);
+                                        Toast.makeText(context, "Thành công", Toast.LENGTH_SHORT).show();
+                                    }else {
+                                        edis.get(holder.getAdapterPosition()).setArrived(false);
+                                        holder.cbIsArrived.setChecked(false);
+                                        Toast.makeText(context, "Thất bại", Toast.LENGTH_SHORT).show();
+                                    }
+                                }
+                        }
+
+                        @Override
+                        public void onFailure(Call<String> call, Throwable t) {
+                            Toast.makeText(context, "Vui lòng kiểm tra mạng", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
+            }
+        });
 
     }
 
@@ -131,6 +196,56 @@ public class EDIAdapter extends RecyclerView.Adapter<EDIAdapter.EDIViewHolder> {
         } else {
             return 0;
         }
+    }
+
+
+    private void alertDelete(String strEDI_OrderID, int position) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setMessage("Bạn có chắc chắn muốn xóa bài viết này?").setPositiveButton("Không", null).setNegativeButton("Xóa", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                delete(strEDI_OrderID, position);
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.setCanceledOnTouchOutside(false);
+        dialog.show();
+    }
+
+    private void delete(String strEDI_OrderID, int position) {
+        final ProgressDialog dialog = Utilities.getProgressDialog(context, "Đang xóa");
+        dialog.show();
+
+        if (!WifiHelper.isConnected(context)) {
+            Utilities.dismissDialog(dialog);
+            RetrofitError.errorAction(context, new NoInternet(), TAG, recyclerView);
+            return;
+        }
+
+
+        MyRetrofitWMS.initRequest().deleteEDI(strEDI_OrderID, LoginPrefer.getUsername(context), "1", "2021/02/27",
+                "1", "1", "1", "1", "1", "1", "1", "1", "2").enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(Call<String> call, Response<String> response) {
+                if (response.isSuccessful() && response.body() != null) {
+                    if (!response.body().equals("00000000-0000-0000-0000-000000000000")) {
+                        Toast.makeText(context, "Xóa thành công", Toast.LENGTH_SHORT).show();
+                        edis.remove(position);
+                        notifyDataSetChanged();
+                    } else {
+                        Toast.makeText(context, "Xóa thất bại", Toast.LENGTH_SHORT).show();
+                    }
+                    Utilities.dismissDialog(dialog);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<String> call, Throwable t) {
+                Utilities.dismissDialog(dialog);
+                Toast.makeText(context, "Kiểm tra kết nối mạng", Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     public class EDIViewHolder extends RecyclerView.ViewHolder {
@@ -168,6 +283,10 @@ public class EDIAdapter extends RecyclerView.Adapter<EDIAdapter.EDIViewHolder> {
         TextView tvLastComment;
         @BindView(R.id.ratingBar)
         AppCompatRatingBar ratingBar;
+        @BindView(R.id.cbIsArrived)
+        CheckBox cbIsArrived;
+        @BindView(R.id.imgDown)
+        ImageView imgDown;
 
         public EDIViewHolder(@NonNull View itemView) {
             super(itemView);

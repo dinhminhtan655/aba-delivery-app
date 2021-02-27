@@ -45,7 +45,8 @@
         android:windowSoftInputMode="adjustPan"
         tools:ignore="GoogleAppIndexingWarning"
         tools:replace="android:icon">
-        <activity android:name=".main.home.fragmenthomedrivercustomer.CommentActivity"></activity>
+        <activity android:name=".main.home.fragmenthomedrivercustomer.UpdateNhapXuatActivity"></activity>
+        <activity android:name=".main.home.fragmenthomedrivercustomer.CommentActivity" />
         <activity
             android:name=".main.home.fragmenthistorybiker.DetailPayslipBikerActivity"
             android:hardwareAccelerated="true"

@@ -194,7 +194,6 @@ public class HomeDriverCustomerFragment extends Fragment {
         reportDate2 = Utilities.formatDate_yyyyMMdd(reportDate);
         btnDate.setText(Utilities.formatDate_ddMMyyyy(reportDate));
         getEDI(strPhoneNumber, reportDate2);
-
     }
 
     @OnClick(R.id.ivArrowLeft)
