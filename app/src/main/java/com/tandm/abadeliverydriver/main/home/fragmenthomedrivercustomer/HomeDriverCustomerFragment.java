@@ -74,7 +74,6 @@ public class HomeDriverCustomerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        Log.d("ant1", "tao nè");
         view = inflater.inflate(R.layout.fragment_home_driver_customer, container, false);
         unbinder = ButterKnife.bind(this,view);
         token = "Bearer " + LoginPrefer.getObject(getContext()).access_token;

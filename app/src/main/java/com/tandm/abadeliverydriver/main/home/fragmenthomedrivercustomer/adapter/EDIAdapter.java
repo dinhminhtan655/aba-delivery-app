@@ -44,14 +44,21 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class EDIAdapter extends RecyclerView.Adapter<EDIAdapter.EDIViewHolder>{
+import static com.tandm.abadeliverydriver.main.utilities.Utilities.CUSTOMERREFERENCE;
+import static com.tandm.abadeliverydriver.main.utilities.Utilities.EDIORDERID;
+import static com.tandm.abadeliverydriver.main.utilities.Utilities.ORDERDATE;
+import static com.tandm.abadeliverydriver.main.utilities.Utilities.TIMESLOTID;
+import static com.tandm.abadeliverydriver.main.utilities.Utilities.TOTALQUANTITY;
+import static com.tandm.abadeliverydriver.main.utilities.Utilities.TRUCKNUMBER;
+
+public class EDIAdapter extends RecyclerView.Adapter<EDIAdapter.EDIViewHolder> {
 
     private static final String TAG = "EDIAdapter";
-    private List<EDI> edis;
+    private static List<EDI> edis;
     private Runnable r;
     private Context context;
     private RecyclerView recyclerView;
-    private Parcelable recyclerViewState;
+    //    private Parcelable recyclerViewState;
     private ProgressDialog progressDialog;
     private int REQUEST_CODE;
     private EDI edi;
@@ -88,6 +95,7 @@ public class EDIAdapter extends RecyclerView.Adapter<EDIAdapter.EDIViewHolder>{
         holder.ratingBar.setRating(edi.ratingValue);
         holder.tvLastComment.setText(edi.comment);
         holder.tvLastCommentBy.setText(edi.commentBy);
+
         if (edi.comment.length() > 0) {
             holder.tvLastCommentBy.setVisibility(View.VISIBLE);
             holder.tvLastComment.setVisibility(View.VISIBLE);
@@ -95,11 +103,13 @@ public class EDIAdapter extends RecyclerView.Adapter<EDIAdapter.EDIViewHolder>{
             holder.tvLastCommentBy.setVisibility(View.GONE);
             holder.tvLastComment.setVisibility(View.GONE);
         }
+
         holder.cbIsArrived.setChecked(edis.get(holder.getAdapterPosition()).IsArrived);
-        recyclerViewState = recyclerView.getLayoutManager().onSaveInstanceState();
+        holder.cbIsArrived.setEnabled(!edis.get(holder.getAdapterPosition()).IsArrived ? true : edis.get(holder.getAdapterPosition()).IsArrived);
 
-        holder.voHieuHoaRatingBar(position);
+//        recyclerViewState = recyclerView.getLayoutManager().onSaveInstanceState();
 
+        holder.voHieuHoaView(position);
 
         holder.ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
@@ -110,7 +120,7 @@ public class EDIAdapter extends RecyclerView.Adapter<EDIAdapter.EDIViewHolder>{
                     r = new Runnable() {
                         @Override
                         public void run() {
-                            holder.updateRating(holder.ratingBar, edi, edi.phoneNumber, holder.tvOrderNumber.getText().toString().split(":")[1].trim(), rating);
+                            holder.updateRating(holder.ratingBar, edi, edis.get(holder.getAdapterPosition()).orderNumber.trim(), rating);
                         }
                     };
                     handler.postDelayed(r, 2000);
@@ -128,6 +138,7 @@ public class EDIAdapter extends RecyclerView.Adapter<EDIAdapter.EDIViewHolder>{
             }
         });
 
+
         holder.imgDown.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -140,7 +151,13 @@ public class EDIAdapter extends RecyclerView.Adapter<EDIAdapter.EDIViewHolder>{
                             case R.id.action_qhse_edit:
                                 Toast.makeText(context, "edit", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(context, UpdateNhapXuatActivity.class);
-//                        intent.putExtra()
+                                intent.putExtra(EDIORDERID, edis.get(holder.getAdapterPosition()).eDI_OrderID);
+                                intent.putExtra(ORDERDATE, edis.get(holder.getAdapterPosition()).orderDate);
+                                intent.putExtra(TIMESLOTID, edis.get(holder.getAdapterPosition()).timeSlot);
+                                intent.putExtra(TRUCKNUMBER, edis.get(holder.getAdapterPosition()).truckNumber);
+                                intent.putExtra(CUSTOMERREFERENCE, edis.get(holder.getAdapterPosition()).customerReference);
+                                intent.putExtra(TOTALQUANTITY, edis.get(holder.getAdapterPosition()).totalQuantity);
+//                                intent.putExtra(,);
                                 context.startActivity(intent);
                                 break;
 
@@ -156,38 +173,38 @@ public class EDIAdapter extends RecyclerView.Adapter<EDIAdapter.EDIViewHolder>{
             }
         });
 
-        holder.cbIsArrived.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        holder.cbIsArrived.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked){
-                    MyRetrofitWMS.initRequest().updateStatusArrive(edi.eDI_OrderID,LoginPrefer.getUsername(context), Settings.Secure.getString(context.getContentResolver(),
-                            Settings.Secure.ANDROID_ID),"Đã đến").enqueue(new Callback<String>() {
-                        @Override
-                        public void onResponse(Call<String> call, Response<String> response) {
-                                if (response.isSuccessful() && response.body() != null){
-                                    if (!response.body().equals("00000000-0000-0000-0000-000000000000")){
-                                        edis.get(holder.getAdapterPosition()).setArrived(true);
-                                        holder.cbIsArrived.setChecked(edis.get(holder.getAdapterPosition()).IsArrived);
-                                        Toast.makeText(context, "Thành công", Toast.LENGTH_SHORT).show();
-                                    }else {
-                                        edis.get(holder.getAdapterPosition()).setArrived(false);
-                                        holder.cbIsArrived.setChecked(false);
-                                        Toast.makeText(context, "Thất bại", Toast.LENGTH_SHORT).show();
-                                    }
-                                }
+            public void onClick(View v) {
+//                Toast.makeText(context, edi.orderNumber + "/" + edi.eDI_OrderID, Toast.LENGTH_SHORT).show();
+                MyRetrofitWMS.initRequest().updateStatusArrive(edis.get(holder.getAdapterPosition()).eDI_OrderID, LoginPrefer.getUsername(context), Settings.Secure.getString(context.getContentResolver(),
+                        Settings.Secure.ANDROID_ID), "Đã đến").enqueue(new Callback<String>() {
+                    @Override
+                    public void onResponse(Call<String> call, Response<String> response) {
+                        if (response.isSuccessful() && response.body() != null) {
+                            if (!response.body().equals("00000000-0000-0000-0000-000000000000")) {
+                                edis.get(holder.getAdapterPosition()).setArrived(true);
+                                holder.cbIsArrived.setChecked(edis.get(holder.getAdapterPosition()).IsArrived);
+                                holder.cbIsArrived.setClickable(false);
+                                Toast.makeText(context, "Thành công", Toast.LENGTH_SHORT).show();
+                            } else {
+                                edis.get(holder.getAdapterPosition()).setArrived(false);
+                                holder.cbIsArrived.setChecked(false);
+                                holder.cbIsArrived.setClickable(true);
+                                Toast.makeText(context, "Thất bại", Toast.LENGTH_SHORT).show();
+                            }
                         }
+                    }
 
-                        @Override
-                        public void onFailure(Call<String> call, Throwable t) {
-                            Toast.makeText(context, "Vui lòng kiểm tra mạng", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                }
+                    @Override
+                    public void onFailure(Call<String> call, Throwable t) {
+                        Toast.makeText(context, "Vui lòng kiểm tra mạng", Toast.LENGTH_SHORT).show();
+                    }
+                });
             }
         });
 
     }
-
 
     @Override
     public int getItemCount() {
@@ -293,21 +310,25 @@ public class EDIAdapter extends RecyclerView.Adapter<EDIAdapter.EDIViewHolder>{
             ButterKnife.bind(this, itemView);
         }
 
-        void voHieuHoaRatingBar(int position) {
+
+        void voHieuHoaView(int position) {
             if (edis.get(position).getRatingValue() > 0) {
                 ratingBar.setIsIndicator(true);
             } else {
                 ratingBar.setIsIndicator(false);
             }
+
+            if (edis.get(position).isArrived()) {
+                cbIsArrived.setEnabled(false);
+            }
         }
 
-
-        private void updateRating(final View view, EDI edi, String phoneNumber, String orderNumber, float rating) {
+        private void updateRating(final View view, EDI edi, String orderNumber, float rating) {
 
             progressDialog = Utilities.getProgressDialog(context, "Đang gửi đánh giá...");
             progressDialog.show();
 
-            phoneNumber = LoginPrefer.getObject(context).userName;
+            String phoneNumber2 = LoginPrefer.getObject(context).userName;
 
             if (!WifiHelper.isConnected(context)) {
                 RetrofitError.errorAction(context, new NoInternet(), TAG, view);
@@ -315,15 +336,15 @@ public class EDIAdapter extends RecyclerView.Adapter<EDIAdapter.EDIViewHolder>{
                 return;
             }
 
-            MyRetrofitWMS.initRequest().insertRatingComment(phoneNumber, orderNumber, rating).enqueue(new Callback<String>() {
+            MyRetrofitWMS.initRequest().insertRatingComment(phoneNumber2, orderNumber, rating).enqueue(new Callback<String>() {
                 @Override
                 public void onResponse(Call<String> call, Response<String> response) {
                     if (response.isSuccessful() && response.body() != null) {
                         if (response.body().equals('"' + "OK" + '"')) {
-                            edi.ratingValue = rating;
-                            edi.setRatingValue(rating);
-                            notifyDataSetChanged();
-//                        recyclerView.getLayoutManager().onRestoreInstanceState(recyclerViewState);
+                            edis.get(getAdapterPosition()).ratingValue = rating;
+                            edis.get(getAdapterPosition()).setRatingValue(rating);
+//                            notifyDataSetChanged();
+//                            recyclerView.getLayoutManager().onRestoreInstanceState(recyclerViewState);
                             Toast.makeText(context, "Đánh giá thành công!", Toast.LENGTH_SHORT).show();
                         }
                         progressDialog.dismiss();

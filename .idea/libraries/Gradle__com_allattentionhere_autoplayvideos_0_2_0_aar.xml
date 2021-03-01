@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.allattentionhere:autoplayvideos:0.2.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dea25ef2b73f43ff0cc007199e09dd35/jetified-autoplayvideos-0.2.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dea25ef2b73f43ff0cc007199e09dd35/jetified-autoplayvideos-0.2.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dea25ef2b73f43ff0cc007199e09dd35/jetified-autoplayvideos-0.2.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/abc6bbd5c70807e01ca26809eb40a94a/jetified-autoplayvideos-0.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/abc6bbd5c70807e01ca26809eb40a94a/jetified-autoplayvideos-0.2.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/abc6bbd5c70807e01ca26809eb40a94a/jetified-autoplayvideos-0.2.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.allattentionhere/autoplayvideos/0.2.0/bbe1821704aa0dfc0645e87a1125b89ed9cad2e3/autoplayvideos-0.2.0-javadoc.jar!/" />

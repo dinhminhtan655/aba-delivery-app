@@ -72,6 +72,19 @@ public class Utilities extends WifiHelper {
 //        public static final String IMAGE_BASE_URL = "http://192.168.2.14/aba2/Attachments3/"; // link Q12
 //            public static final String IMAGE_BASE_URL = "http://10.10.12.236/aba2/Attachments3/"; // link Kho
 
+    public static final String EDIORDERID = "EDIORDERID";
+    public static final String ORDERDATE = "ORDERDATE";
+    public static final String TIMESLOTID = "TIMESLOTID";
+    public static final String TRUCKNUMBER = "TRUCKNUMBER";
+    public static final String CUSTPONUMBER = "CUSTPONUMBER";
+    public static final String CUSTOMERREFERENCE = "CUSTOMERREFERENCE";
+    public static final String TOTALQUANTITY = "TOTALQUANTITY";
+    public static final String TOTALWEIGHTS = "TOTALWEIGHTS";
+    public static final String VEHICLETYPE = "VEHICLETYPE";
+    public static final String DOCKDOORID = "DOCKDOORID";
+    public static final String ORDERTYPE = "ORDERTYPE";
+
+
     public static Dialog createNewDialog(Context context, int layoutID) {
         final Dialog dialog = new Dialog(context);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);

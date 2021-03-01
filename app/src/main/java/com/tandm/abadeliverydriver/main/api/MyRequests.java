@@ -967,6 +967,7 @@ public interface MyRequests {
 
 
     //---------------------------Zalo---------------------------
+
     @FormUrlEncoded
     @POST("api/ZNSRating")
     Call<List<UserRating>> GetZNSRating(@Header("Authorization") String auth,

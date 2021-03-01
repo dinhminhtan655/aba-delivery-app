@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.gcacace:signature-pad:1.2.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9ee3c05bfa7994b23ab9c0620968f54c/jetified-signature-pad-1.2.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9ee3c05bfa7994b23ab9c0620968f54c/jetified-signature-pad-1.2.1/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9ee3c05bfa7994b23ab9c0620968f54c/jetified-signature-pad-1.2.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5ab87948aad1fe2de98233718366bfc1/jetified-signature-pad-1.2.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5ab87948aad1fe2de98233718366bfc1/jetified-signature-pad-1.2.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5ab87948aad1fe2de98233718366bfc1/jetified-signature-pad-1.2.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.gcacace/signature-pad/1.2.1/f247b3c6c7d6f5771c2c1b7c4d99ba204d4bbd1c/signature-pad-1.2.1-javadoc.jar!/" />
